@@ -41,7 +41,7 @@ const About = () => {
                 Was mich antreibt: Technik soll Arbeit abnehmen, nicht neue Probleme schaffen.
               </p>
               <p>
-                Mein Hintergrund liegt in der Softwareentwicklung, aber meine Stärke ist 
+                Ich habe einen Master in Information Systems mit Schwerpunkten Softwareentwicklung und KI. Meine Stärke ist 
                 die Schnittstelle zwischen Technik und echten Business-Prozessen. 
                 Ich verstehe sowohl die technischen Möglichkeiten als auch die 
                 praktischen Anforderungen im Arbeitsalltag.
