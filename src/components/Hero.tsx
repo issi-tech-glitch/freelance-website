@@ -92,11 +92,14 @@ const Hero = () => {
           </div>
 
           {/* Trust indicators */}
-          <div
-            className="mt-16 pt-8 border-t border-border/50 opacity-0 animate-fade-in"
-            style={{ animationDelay: "0.5s" }}
-          >
-            <p className="text-sm text-muted-foreground mb-4">Fokus auf messbare Ergebnisse:</p>
+          <div className="mt-16 mb-10 pt-8 opacity-0 animate-fade-in" style={{ animationDelay: "0.5s" }}>
+            {/* Border line */}
+            <div className="w-[50%] border-t-2 border-border/100 mb-4 rounded-full"></div>
+            {/* Text */}
+            <p className="text-sm text-muted-foreground mb-4">
+              Fokus auf messbare Ergebnisse:
+            </p>
+            {/* Indicators */}
             <div className="flex flex-wrap gap-6 md:gap-10">
               {[
                 "Zeitersparnis",
