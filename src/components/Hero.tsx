@@ -35,7 +35,7 @@ const Hero = () => {
           <div className="relative">
 
             {/* Text content */}
-            <div className="relative z-10 pr-60 max-w-6xl">
+            <div className="relative z-10 pr-0 lg:pr-60 max-w-full lg:max-w-6xl">
 
               {/* Headline */}
               <h1
@@ -107,7 +107,7 @@ const Hero = () => {
                 "Saubere Workflows",
                 "Wartbare Lösungen"
               ].map((item) => (
-                <div key={item} className="flex items-center gap-2 text-sm font-medium text-foreground">
+                <div className="flex items-center flex-wrap gap-2 text-sm sm:gap-2 md:gap-2 font-medium text-foreground">
                   <div className="w-1.5 h-1.5 rounded-full bg-accent" />
                   {item}
                 </div>
