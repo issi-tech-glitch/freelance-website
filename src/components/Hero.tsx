@@ -39,7 +39,7 @@ const Hero = () => {
 
               {/* Headline */}
               <h1
-                className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 opacity-0 animate-fade-in text-balance"
+                className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight mb-6 opacity-0 animate-fade-in text-balance"
                 style={{ animationDelay: "0.2s" }}
               >
                 Ich automatisiere Prozesse,{" "}
@@ -54,7 +54,7 @@ const Hero = () => {
               >
                 KI-gestützte Prozessautomatisierung, API-Integration und Workflow-Optimierung
                 für <span className="text-foreground font-medium">KMUs</span>, <span className="text-foreground font-medium">Agenturen</span> und <span className="text-foreground font-medium">Startups</span>.
-                Keine Spielereien – stabile Lösungen, die im Alltag funktionieren.
+                {/* Keine Spielereien – stabile Lösungen, die im Alltag funktionieren. */}
               </p>
 
               {/* CTAs */}
@@ -84,8 +84,8 @@ const Hero = () => {
             {/* Hero image layer */}
             <div className="hidden lg:block absolute top-1/2 right-[-6rem] -translate-y-1/2 z-0">
               <img
-                src="/images/profile-image.png"
-                alt="Profile"
+                src="/images/hero-heinemann-banner.png"
+                alt="Profilbild von Clarissa Heinemann"
                 className="h-[520px] w-auto object-cover "
               />
             </div>
