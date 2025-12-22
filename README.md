@@ -39,7 +39,7 @@ This is the personal website of **Clarissa Heinemann**, showcasing her freelance
 
 1. Clone the repository:
 ```bash
-git clone git@github.com:issi-tech-glitch/process-ai-works.git
+git clone git@github.com:issi-tech-glitch/freelance-website.git
 ```
 
 2. Install dependencies:
