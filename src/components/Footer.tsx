@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Logo */}
           <div className="font-semibold text-lg tracking-tight">
             <span className="text-primary">&lt;</span>
-            dev
+            Clarissa Heinemann
             <span className="text-primary">/&gt;</span>
           </div>
 
