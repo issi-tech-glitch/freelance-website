@@ -40,23 +40,28 @@ This is the personal website of **Clarissa Heinemann**, showcasing her freelance
 
 ## 🚀 Getting Started
 
-```bash
 1. Clone the repository:
+```bash
 git clone git@github.com:issi-tech-glitch/process-ai-works.git
+```
 
 2. Install dependencies:
-
+```bash
 npm install
 # or
 yarn install
+```
 
 3. Start development server:
+```bash
 npm run dev
 # or
 yarn dev
+```
 
 4. Build for production
-
+```bash
 npm run build
 # or
 yarn build
+```
