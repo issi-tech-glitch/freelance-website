@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, User, Briefcase, Building, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight, Layers, Cpu, Zap } from "lucide-react";
 
 const scrollToContact = () => {
     document.getElementById("kontakt")?.scrollIntoView({ behavior: "smooth" });
@@ -18,7 +18,7 @@ const Pricing = () => {
                 "Technische Dokumentation",
                 "1 Woche Go-Live Support (Hypercare)"
             ],
-            icon: <User className="w-5 h-5 text-primary" />,
+            icon: <Zap className="w-5 h-5 text-primary" />,
         },
         {
             title: "Advanced KI",
@@ -31,7 +31,7 @@ const Pricing = () => {
                 "Fehler-Handling & Monitoring",
                 "2 Wochen Go-Live Support (Hypercare)"
             ],
-            icon: <Briefcase className="w-5 h-5 text-primary" />,
+            icon: <Cpu className="w-5 h-5 text-primary" />,
         },
         {
             title: "Custom Solution",
@@ -44,7 +44,7 @@ const Pricing = () => {
                 "Intensive Team-Einweisung",
                 "4 Wochen Go-Live Support (Hypercare)"
             ],
-            icon: <Building className="w-5 h-5 text-primary" />,
+            icon: <Layers className="w-5 h-5 text-primary" />,
         },
     ];
 
