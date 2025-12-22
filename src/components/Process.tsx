@@ -40,7 +40,7 @@ const Process = () => {
         {/* Steps */}
         <div className="relative">
           {/* Connection line */}
-          <div className="absolute left-8 top-0 bottom-0 w-px bg-border hidden md:block" />
+          <div className="absolute left-8 top-0 bottom-0 w-px bg-border" />
 
           <div className="space-y-8">
             {steps.map((step, index) => (

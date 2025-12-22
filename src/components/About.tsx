@@ -1,4 +1,4 @@
-import { Code2, Lightbulb, Target, Wrench } from "lucide-react";
+import { ChevronRight, Code2, Lightbulb, Target, Wrench } from "lucide-react";
 import { FaLinkedin, FaGithub, FaInstagram, FaTiktok } from "react-icons/fa";
 
 const qualities = [
@@ -206,9 +206,9 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-2">
                 Hi, ich bin <span className="gradient-text">Clarissa</span>{" "}
               </h2>
+
               {/* Profil-Statement */}
               <div className="mt-6 max-w-2xl space-y-6">
-
                 <p className="text-lg text-muted-foreground">
                   Ich habe einen <span className="text-foreground font-medium">Master in Information Systems</span> mit Schwerpunkt Softwareentwicklung
                   und Künstliche Intelligenz und arbeite seit mehreren Jahren praktisch an
@@ -217,23 +217,23 @@ const About = () => {
 
                 <ul className="space-y-3 text-lg text-muted-foreground">
                   <li className="flex items-start gap-3">
-                    <span className="text-primary mt-1">▸</span>
+                    <ChevronRight className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
                     <span>
-                      Mehrjährige Erfahrung aus <span className="text-foreground font-medium">KI- und Datenprojekten </span>
+                      Mehrjährige Erfahrung aus <span className="text-foreground font-medium">KI- und Datenprojekten</span>
                       im Studium, in der Forschung und in der Praxis
                     </span>
                   </li>
 
                   <li className="flex items-start gap-3">
-                    <span className="text-primary mt-1">▸</span>
+                    <ChevronRight className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
                     <span>
-                      Projektbezogene Arbeit in <span className="text-foreground font-medium">Robotic Process Automation (RPA) </span>
+                      Projektbezogene Arbeit in <span className="text-foreground font-medium">Robotic Process Automation (RPA)</span>
                       und als <span className="text-foreground font-medium">Data Engineer</span>
                     </span>
                   </li>
 
                   <li className="flex items-start gap-3">
-                    <span className="text-primary mt-1">▸</span>
+                    <ChevronRight className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
                     <span>
                       Fokus auf <span className="text-foreground font-medium">stabile, wartbare Automatisierungen</span>,
                       die Prozesse wirklich vereinfachen

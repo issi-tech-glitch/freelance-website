@@ -6,6 +6,7 @@ const navigation = [
   { name: "Leistungen", href: "#leistungen" },
   { name: "Beispiele", href: "#beispiele" },
   { name: "Über mich", href: "#ueber-mich" },
+  { name: "Preise", href: "#pricing" },
   { name: "Arbeitsweise", href: "#arbeitsweise" },
 ];
 
@@ -28,17 +29,16 @@ const Header = () => {
   };
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "bg-background/80 backdrop-blur-lg border-b border-border/50 py-3" 
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+          ? "bg-background/80 backdrop-blur-lg border-b border-border/50 py-3"
           : "bg-transparent py-5"
-      }`}
+        }`}
     >
       <div className="container-section flex items-center justify-between">
         {/* Logo */}
-        <a 
-          href="#" 
+        <a
+          href="#"
           className="font-semibold text-lg tracking-tight"
           onClick={(e) => {
             e.preventDefault();
@@ -61,8 +61,8 @@ const Header = () => {
               {item.name}
             </button>
           ))}
-          <Button 
-            size="sm" 
+          <Button
+            size="sm"
             onClick={() => scrollToSection("#kontakt")}
           >
             Kontakt
@@ -96,7 +96,7 @@ const Header = () => {
                 {item.name}
               </button>
             ))}
-            <Button 
+            <Button
               className="mt-2"
               onClick={() => scrollToSection("#kontakt")}
             >
