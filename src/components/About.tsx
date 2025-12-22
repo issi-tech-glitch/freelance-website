@@ -39,11 +39,27 @@ const techGroups = [
     items: [
       { name: "OpenAI API", icon: "/icons/openai.svg" },
       { name: "SQL", icon: "/icons/sql.svg" },
-      { name: "Tableau", icon: "/icons/tableau.svg" },
+      { name: "Streamlit", icon: "/icons/streamlit.svg" },
       { name: "Pandas", icon: "/icons/pandas.svg" },
     ],
   }
 ];
+
+const certifications = [
+  {
+    title: "UiPath Certified Advanced RPA Developer v1.0",
+    issuer: "UiPath",
+    icon: "/icons/uipath.svg",
+    link: "https://cp.certmetrics.com/uipath/en/public/verify/credential/BJ5EXLGC12B1Q8KE", // optional
+  },
+  {
+    title: "Make Advanced & AI Automation Explorer",
+    issuer: "Make",
+    icon: "/icons/make.svg",
+    link: "https://www.credly.com/users/clarissa-heinemann",
+  }
+];
+
 
 
 const About = () => {
@@ -90,11 +106,6 @@ const About = () => {
               <h3 className="text-lg font-semibold text-foreground">
                 Technologien & Tools
               </h3>
-
-              <p className="text-sm text-muted-foreground max-w-sm">
-                Bewährte Werkzeuge für stabile, wartbare Automatisierungen
-                und datengetriebene Systeme.
-              </p>
 
               <div className="flex flex-col gap-5 w-full">
                 {techGroups.map((group) => (
@@ -143,6 +154,47 @@ const About = () => {
               </div>
             </div>
 
+            {/* Zertifizierungen */}
+            <div className="mt-8 w-full flex flex-col gap-4">
+              <h3 className="text-lg font-semibold text-foreground">
+                Zertifizierungen
+              </h3>
+
+              <div className="grid grid-cols-2 gap-4">
+                {certifications.map((cert) => (
+                  <a
+                    key={cert.title}
+                    href={cert.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="
+          group
+          flex items-center gap-3
+          transition-colors
+        "
+                  >
+                    {/* Badge / Icon */}
+                    <img
+                      src={cert.icon}
+                      alt={cert.title}
+                      className="w-10 h-10 object-contain"
+                    />
+
+                    {/* Text */}
+                    <div className="flex flex-col">
+                      <span className="text-sm font-medium text-foreground leading-tight">
+                        {cert.title}
+                      </span>
+                      <span className="text-xs text-muted-foreground">
+                        {cert.issuer}
+                      </span>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+
           </div>
 
 
@@ -155,26 +207,40 @@ const About = () => {
                 Hi, ich bin <span className="gradient-text">Clarissa</span>{" "}
               </h2>
               {/* Profil-Statement */}
-              <div className="mt-6 max-w-2xl space-y-4">
+              <div className="mt-6 max-w-2xl space-y-6">
+
                 <p className="text-lg text-muted-foreground">
-                  Ich habe einen Master in Information Systems mit Fokus auf Softwareentwicklung
+                  Ich habe einen <span className="text-foreground font-medium">Master in Information Systems</span> mit Schwerpunkt Softwareentwicklung
                   und Künstliche Intelligenz und arbeite seit mehreren Jahren praktisch an
                   daten- und prozessgetriebenen Systemen.
                 </p>
 
-                <p className="text-lg text-muted-foreground">
-                  Mein Hintergrund reicht von KI- und Datenprojekten im Studium und in der Forschung
-                  bis hin zu produktiver Arbeit in <span className="text-foreground font-medium">Robotic Process Automation </span>
-                  und als <span className="text-foreground font-medium">Data Engineer</span>.
-                </p>
+                <ul className="space-y-3 text-lg text-muted-foreground">
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1">▸</span>
+                    <span>
+                      Mehrjährige Erfahrung aus <span className="text-foreground font-medium">KI- und Datenprojekten </span>
+                      im Studium, in der Forschung und in der Praxis
+                    </span>
+                  </li>
 
-                <p className="text-lg text-muted-foreground">
-                  Heute verbinde ich dieses technische Fundament mit einem klaren Ziel:
-                  Automatisierungen zu bauen, die Prozesse wirklich vereinfachen –
-                  stabil, wartbar und verständlich für Teams.
-                </p>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1">▸</span>
+                    <span>
+                      Projektbezogene Arbeit in <span className="text-foreground font-medium">Robotic Process Automation (RPA) </span>
+                      und als <span className="text-foreground font-medium">Data Engineer</span>
+                    </span>
+                  </li>
+
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary mt-1">▸</span>
+                    <span>
+                      Fokus auf <span className="text-foreground font-medium">stabile, wartbare Automatisierungen</span>,
+                      die Prozesse wirklich vereinfachen
+                    </span>
+                  </li>
+                </ul>
               </div>
-
             </div>
 
             {/* Qualities Grid */}

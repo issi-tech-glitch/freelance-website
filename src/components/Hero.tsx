@@ -47,12 +47,10 @@ const Hero = () => {
               </h1>
 
               {/* Subline */}
-              <p
-                className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 opacity-0 animate-fade-in"
-                style={{ animationDelay: "0.3s" }}
-              >
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8">
                 KI-gestützte Prozessautomatisierung, API-Integration und Workflow-Optimierung
-                für Teams, die <span className="text-foreground font-medium">Zeit sparen </span> und Prozesse sauber <span className="text-foreground font-medium">automatisieren </span> wollen.
+                für KMUs, Agenturen und Startups, die <span className="text-foreground font-medium">Zeit sparen </span>
+                und Prozesse sauber <span className="text-foreground font-medium">automatisieren</span> wollen.
               </p>
 
               {/* CTAs */}

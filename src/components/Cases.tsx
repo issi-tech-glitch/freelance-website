@@ -1,21 +1,21 @@
 const cases = [
   {
-    problem: "Ein Agentur-Team verbrachte jeden Tag 2+ Stunden damit, Daten aus E-Mails manuell in ihr CRM zu übertragen.",
+    problem: "Ein Agentur-Team verbringt jeden Tag 2+ Stunden damit, Daten aus E-Mails manuell in ihr CRM zu übertragen.",
     solution: "Automatischer E-Mail-Parser mit KI-Extraktion und direkter CRM-Integration via Make.",
     result: "90% Zeitersparnis bei der Dateneingabe. Team kann sich auf Kundenbeziehungen konzentrieren.",
     tags: ["E-Mail Parsing", "CRM Integration", "Make"],
   },
   {
-    problem: "Ein Startup musste wöchentlich Reportings aus 5 verschiedenen Tools manuell zusammenstellen.",
+    problem: "Ein Startup muss wöchentlich Reportings aus 5 verschiedenen Tools manuell zusammenstellen.",
     solution: "Automatisierter Reporting-Workflow mit API-Anbindungen und automatischer PDF-Generierung.",
     result: "Von 4 Stunden auf 15 Minuten. Reports gehen jetzt automatisch jeden Montag raus.",
     tags: ["API Integration", "Automatisches Reporting", "PDF Generation"],
   },
   {
-    problem: "Ein KMU hatte keinen Überblick über Bestellstatus und Lagerbestände – alles lief über Excel und E-Mail.",
-    solution: "Verknüpfung von Shop-System, Lagerverwaltung und Versanddienstleister mit automatischen Status-Updates.",
+    problem: "Ein KMU hat keinen Überblick über Bestellstatus und Lagerbestände – alles läuft über Excel und E-Mail.",
+    solution: "Verknüpfung von Shop-System, Lagerverwaltung und Versanddienstleister mit automatischen Status-Updates und Dashboard.",
     result: "Echtzeit-Transparenz, weniger Kundennachfragen, schnellere Bearbeitung.",
-    tags: ["E-Commerce", "Lagerverwaltung", "Prozessintegration"],
+    tags: ["E-Commerce", "Lagerverwaltung", "Prozessintegration", "Dashboards"],
   },
 ];
 

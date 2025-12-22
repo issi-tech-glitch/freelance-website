@@ -3,15 +3,15 @@ import { Bot, Link2, Workflow, Users } from "lucide-react";
 const services = [
   {
     icon: Bot,
-    title: "KI-gestützte Prozessautomatisierung",
-    description: "Automatisierung repetitiver Aufgaben mit intelligenten Workflows. Von Datenextraktion bis Dokumentenverarbeitung.",
+    title: "KI-gestützte Lösungen",
+    description: "Smarte Extraktion, Text- und Dokumentenverarbeitung und Textgenerierung mit gängigen KI-Modellen, um Prozesse noch effizienter machen.",
     result: "Weniger Routinearbeit, mehr Zeit für Kernaufgaben.",
     color: "bg-primary/10 text-primary",
   },
   {
     icon: Workflow,
-    title: "Workflow-Optimierung",
-    description: "Analyse und Neugestaltung bestehender Prozesse. Identifikation von Engpässen und Automatisierungspotential.",
+    title: "Prozessanalyse & Automatisierung",
+    description: "Schwachstellen erkennen und Abläufe verbessern – repetitive Aufgaben automatisieren mit Python, Make oder UiPath.",
     result: "Schnellere Durchlaufzeiten, weniger Fehler.",
     color: "bg-accent/10 text-accent",
   },
@@ -24,9 +24,9 @@ const services = [
   },
   {
     icon: Users,
-    title: "Automatisierung für Teams",
-    description: "Lösungen, die von eurem Team ohne tiefes Technik-Know-how genutzt werden können.",
-    result: "Funktioniert auch ohne dediziertes Tech-Team.",
+    title: "Daten & Reporting",
+    description: "Automatisierte Reports, Dashboards und Datenaufbereitung für klare Insights (SQL, Python, Streamlit, BI Tools).",
+    result: "Daten automatisiert verstehen und nutzen.",
     color: "bg-accent-purple/10 text-accent-purple",
   },
 ];
