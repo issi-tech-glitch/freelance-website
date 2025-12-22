@@ -24,19 +24,27 @@ const qualities = [
   },
 ];
 
-const technologies = [
-  { name: "Python", icon: "/icons/python.svg" },
-  { name: "Make", icon: "/icons/make.svg" },
-  { name: "UiPath", icon: "/icons/uipath.svg" },
-  { name: "OpenAI", icon: "/icons/openai.svg" },
-  { name: "Gemini", icon: "/icons/gemini.svg" },
-  { name: "FastAPI", icon: "/icons/fastapi.svg" },
-  { name: "TypeScript", icon: "/icons/typescript.svg" },
-
-  { name: "PostgreSQL", icon: "/icons/postgresql.svg" },
-  { name: "Docker", icon: "/icons/docker.svg" },
-  { name: "Git", icon: "/icons/git.svg" },
+const techGroups = [
+  {
+    title: "Automatisierung & Backend",
+    items: [
+      { name: "Python", icon: "/icons/python.svg" },
+      { name: "Make", icon: "/icons/make.svg" },
+      { name: "UiPath", icon: "/icons/uipath.svg" },
+      { name: "FastAPI", icon: "/icons/fastapi.svg" },
+    ],
+  },
+  {
+    title: "Daten und KI",
+    items: [
+      { name: "OpenAI API", icon: "/icons/openai.svg" },
+      { name: "SQL", icon: "/icons/sql.svg" },
+      { name: "Tableau", icon: "/icons/tableau.svg" },
+      { name: "Pandas", icon: "/icons/pandas.svg" },
+    ],
+  }
 ];
+
 
 const About = () => {
   return (
@@ -73,34 +81,68 @@ const About = () => {
 
               <div className="flex flex-col gap-0 items-center text-center">
                 <h4>Clarissa Heinemann</h4>
-                <p className="text-sm text-muted-foreground">M.Sc. Information Systems</p>
+                <p className="text-sm text-muted-foreground">M.Sc. Information Systems (Software & KI)</p>
               </div>
             </div>
 
-            {/* Technologien, linksbündig */}
-            <div className="mt-4 w-full flex flex-col items-start">
-              <h3 className="text-lg font-semibold text-foreground mb-4">Technologien und APIs</h3>
-              <div className="flex flex-wrap gap-6 items-start">
-                {technologies.map((tech) => (
-                  <div
-                    key={tech.name}
-                    className="relative group w-12 h-12 flex items-center justify-center"
-                  >
-                    {/* Icon */}
-                    <img
-                      src={tech.icon}
-                      alt={tech.name}
-                      className="w-full h-full object-contain transition-transform transition-opacity duration-300 transform group-hover:scale-110 group-hover:rotate-3 group-hover:opacity-10"
-                    />
+            {/* Technologien */}
+            <div className="mt-4 w-full flex flex-col items-start gap-6">
+              <h3 className="text-lg font-semibold text-foreground">
+                Technologien & Tools
+              </h3>
 
-                    {/* Text overlay */}
-                    <span className="absolute inset-0 flex items-center justify-center text-xs font-semibold text-muted-foreground opacity-0 transition-opacity duration-300 group-hover:opacity-100 text-center">
-                      {tech.name}
-                    </span>
+              <p className="text-sm text-muted-foreground max-w-sm">
+                Bewährte Werkzeuge für stabile, wartbare Automatisierungen
+                und datengetriebene Systeme.
+              </p>
+
+              <div className="flex flex-col gap-5 w-full">
+                {techGroups.map((group) => (
+                  <div key={group.title}>
+                    <p className="text-xs font-medium text-muted-foreground mb-3">
+                      {group.title}
+                    </p>
+
+                    <div className="flex flex-wrap gap-5">
+                      {group.items.map((tech) => (
+                        <div
+                          key={tech.name}
+                          className="relative group w-12 h-12 flex items-center justify-center"
+                        >
+                          {/* Icon */}
+                          <img
+                            src={tech.icon}
+                            alt={tech.name}
+                            className={`
+                            object-contain transition-transform transition-opacity duration-300
+                            transform group-hover:scale-110 group-hover:rotate-3 group-hover:opacity-10
+                            ${tech.name === "FastAPI" ? "w-9 h-9" : "w-12 h-12"}
+                          `}
+                          />
+
+                          {/* Text overlay */}
+                          <span
+                            className="
+                            absolute inset-0
+                            flex items-center justify-center
+                            text-[11px] font-semibold
+                            text-muted-foreground
+                            opacity-0
+                            transition-opacity duration-300
+                            group-hover:opacity-100
+                            text-center
+                            "
+                          >
+                            {tech.name}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
+
           </div>
 
 
