@@ -21,7 +21,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="kontakt" className="section-padding bg-card">
+    <section id="kontakt" className="section-padding">
       <div className="container-section">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-sm font-mono text-primary mb-3">KONTAKT</p>

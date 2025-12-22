@@ -23,7 +23,7 @@ const steps = [
 
 const Process = () => {
   return (
-    <section id="arbeitsweise" className="section-padding">
+    <section id="arbeitsweise" className="section-padding bg-card">
       <div className="container-section">
         {/* Header */}
         <div className="max-w-2xl mb-16">
