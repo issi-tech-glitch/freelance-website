@@ -35,27 +35,13 @@ This is the personal website of **Clarissa Heinemann**, showcasing her freelance
 
 ---
 
-## 📁 Project Structure
-src/
-├─ components/
-│ ├─ Hero.jsx
-│ ├─ Leistungen.jsx
-│ ├─ Cases.jsx
-│ ├─ Pricing.jsx
-│ ├─ About.jsx
-│ └─ Contact.jsx
-├─ pages/
-└─ assets/
-
-
 
 ---
 
 ## 🚀 Getting Started
 
-1. Clone the repository:
-
 ```bash
+1. Clone the repository:
 git clone git@github.com:issi-tech-glitch/process-ai-works.git
 
 2. Install dependencies:
