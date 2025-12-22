@@ -1,19 +1,23 @@
 import { Button } from "@/components/ui/button";
-import { Mail, ArrowUpRight, Copy, Check } from "lucide-react";
+import { Mail, Copy, Check, MessageCircle, ArrowUpRight } from "lucide-react";
 import { useState } from "react";
 
 const Contact = () => {
-  const [copied, setCopied] = useState(false);
+  const [copiedMail, setCopiedMail] = useState(false);
+  const [copiedNumber, setCopiedNumber] = useState(false);
   const email = "kontakt@clarissa-heinemann.de";
+  const whatsappNumber = "+4915222389418";
 
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(email);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      // optional: fallback / error handling
-    }
+  const handleCopyEmail = async () => {
+    await navigator.clipboard.writeText(email);
+    setCopiedMail(true);
+    setTimeout(() => setCopiedMail(false), 2000);
+  };
+
+  const handleCopyNumber = async () => {
+    await navigator.clipboard.writeText(whatsappNumber);
+    setCopiedNumber(true);
+    setTimeout(() => setCopiedNumber(false), 2000);
   };
 
   return (
@@ -26,84 +30,92 @@ const Contact = () => {
             Lass uns über dein Projekt sprechen
           </h2>
 
-          <p className="text-lg text-muted-foreground mb-10">
+          <p className="text-lg text-muted-foreground mb-12">
             Du hast einen Prozess, der automatisiert werden könnte?
             Oder bist unsicher, ob Automatisierung für euch Sinn macht?
             Schreib mir – ich schaue mir das gern unverbindlich an.
           </p>
 
-          {/* Primary CTA */}
-          <div className="flex justify-center mb-3">
-            <Button
-              variant="hero"
-              size="xl"
-              asChild
-              className="group"
-            >
-              <a href={`mailto:${email}`}>
-                <Mail className="w-5 h-5" />
-                E-Mail schreiben
-                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </a>
-            </Button>
-          </div>
+          {/* Contact options */}
+          <div className="grid sm:grid-cols-2 gap-6 mb-12">
 
-          {/* Copy Email */}
-          <div className="flex justify-center mb-12">
-            <div className="flex items-center gap-3">
+            {/* EMAIL */}
+            <div className="p-6 text-left">
+              <div className="flex items-center gap-2 mb-3">
+                <Mail className="w-5 h-5 text-primary" />
+                <h3 className="text-lg font-semibold">E-Mail</h3>
+              </div>
+
+              {/* Copy row */}
               <button
-                type="button"
-                onClick={handleCopy}
+                onClick={handleCopyEmail}
                 className="
-        group relative
-        flex items-center justify-center
-        w-10 h-10
-        rounded-full
-        border border-border
-        bg-background/60
-        text-muted-foreground
-        transition-all
-        hover:bg-background hover:text-foreground
-        hover:scale-105
-      "
+      group mb-6
+      flex items-center gap-2
+      text-sm text-muted-foreground
+      hover:text-foreground
+      transition-colors
+    "
               >
-                {copied ? (
-                  <Check className="w-4 h-4 text-accent" />
+                {copiedMail ? (
+                  <Check className="w-3.5 h-3.5 text-accent" />
                 ) : (
-                  <Copy className="w-4 h-4" />
+                  <Copy className="w-3.5 h-3.5" />
                 )}
-
-                {/* Tooltip */}
-                <span
-                  className="
-          pointer-events-none
-          absolute -bottom-8
-          text-xs
-          px-2 py-1
-          rounded-md
-          bg-muted
-          text-muted-foreground
-          opacity-0
-          group-hover:opacity-100
-          transition-opacity
-          whitespace-nowrap
-        "
-                >
-                  {copied ? "Kopiert" : "E-Mail kopieren"}
-                </span>
+                <span className="select-all">{email}</span>
               </button>
 
-              {/* Email text */}
-              <span className="text-sm text-muted-foreground select-all">
-                {email}
-              </span>
+              <Button variant="hero" asChild className="w-[70%]">
+                <a href={`mailto:${email}`}>Schreiben
+                  <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </a>
+              </Button>
+            </div>
+
+
+            {/* WHATSAPP */}
+            <div className="p-6 text-left">
+              <div className="flex items-center gap-2 mb-3">
+                <MessageCircle className="w-5 h-5 text-primary" />
+                <h3 className="text-lg font-semibold">WhatsApp</h3>
+              </div>
+
+              {/* Copy row */}
+              <button
+                onClick={handleCopyNumber}
+                className="
+      group mb-6
+      flex items-center gap-2
+      text-sm text-muted-foreground
+      hover:text-foreground
+      transition-colors
+    "
+              >
+                {copiedNumber ? (
+                  <Check className="w-3.5 h-3.5 text-accent" />
+                ) : (
+                  <Copy className="w-3.5 h-3.5" />
+                )}
+                <span className="select-all">+49 1522 2389418</span>
+              </button>
+
+              <Button variant="hero" asChild className="w-[70%]">
+                <a
+                  href={`https://wa.me/${whatsappNumber.replace("+", "")}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Chat starten
+                  <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </a>
+              </Button>
             </div>
           </div>
 
-          {/* Additional info */}
+          {/* After contact info */}
           <div className="pt-8 border-t border-border/50">
             <p className="text-sm text-muted-foreground mb-4">
-              Was passiert nach der Anfrage?
+              Was passiert nach deiner Anfrage?
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center text-sm">
@@ -113,11 +125,11 @@ const Contact = () => {
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 rounded-full bg-accent" />
-                <span>Erste Einschätzung & Empfehlung</span>
+                <span>Klare Einschätzung & Empfehlung</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 rounded-full bg-accent" />
-                <span>Kein Verkaufsdruck, versprochen</span>
+                <span>Kein Verkaufsdruck</span>
               </div>
             </div>
           </div>
