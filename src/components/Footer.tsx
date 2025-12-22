@@ -19,10 +19,10 @@ const Footer = () => {
 
           {/* Links */}
           <div className="flex gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-foreground transition-colors">
+            <a href="/impressum" className="hover:text-foreground transition-colors">
               Impressum
             </a>
-            <a href="#" className="hover:text-foreground transition-colors">
+            <a href="/datenschutz" className="hover:text-foreground transition-colors">
               Datenschutz
             </a>
           </div>
