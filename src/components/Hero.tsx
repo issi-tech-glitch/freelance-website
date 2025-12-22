@@ -42,9 +42,8 @@ const Hero = () => {
                 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight mb-6 opacity-0 animate-fade-in text-balance"
                 style={{ animationDelay: "0.2s" }}
               >
-                Ich automatisiere Prozesse,{" "}
-                <span className="gradient-text">damit dein Team</span>{" "}
-                sich auf das Wesentliche konzentrieren kann.
+                Ich  <span className="gradient-text">automatisiere</span>{" "} Prozesse
+                – stabil, wartbar und messbar.
               </h1>
 
               {/* Subline */}
@@ -53,8 +52,7 @@ const Hero = () => {
                 style={{ animationDelay: "0.3s" }}
               >
                 KI-gestützte Prozessautomatisierung, API-Integration und Workflow-Optimierung
-                für <span className="text-foreground font-medium">KMUs</span>, <span className="text-foreground font-medium">Agenturen</span> und <span className="text-foreground font-medium">Startups</span>.
-                {/* Keine Spielereien – stabile Lösungen, die im Alltag funktionieren. */}
+                für Teams, die <span className="text-foreground font-medium">Zeit sparen </span> und Prozesse sauber <span className="text-foreground font-medium">automatisieren </span> wollen.
               </p>
 
               {/* CTAs */}
@@ -104,7 +102,7 @@ const Hero = () => {
               {[
                 "Zeitersparnis",
                 "Weniger manuelle Arbeit",
-                "Saubere Workflows",
+                "Saubere Prozesse",
                 "Wartbare Lösungen"
               ].map((item) => (
                 <div className="flex items-center flex-wrap gap-2 text-sm sm:gap-2 md:gap-2 font-medium text-foreground">
