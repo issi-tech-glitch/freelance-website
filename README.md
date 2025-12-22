@@ -1,73 +1,76 @@
-# Welcome to your Lovable project
+# Clarissa Heinemann – Freelance Developer Website
 
-## Project info
+This is the personal website of **Clarissa Heinemann**, showcasing her freelance services in **process automation, API integration, and AI-powered workflow optimization** for SMEs, agencies, and startups. The site highlights services, case studies, technology stack, work approach, pricing guidance, and contact information.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## 🌟 Overview
 
-There are several ways of editing your application.
+- **Freelance Focus:** Automate processes that save time, reduce manual work, and integrate data flows seamlessly.
+- **Services Offered:** AI-powered process automation, workflow optimization, API integration, dashboards & reporting.
+- **Target Audience:** Teams without a dedicated tech department, startups, agencies, and SMEs.
+- **Goal:** Deliver stable, maintainable, and measurable solutions.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🖥 Features
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Hero Section:** Introduction, core message, and call-to-actions.  
+- **Services / Packages:** Clear 4-box layout outlining offerings.  
+- **Case Studies:** Problem → Solution → Result structure for real-life examples.  
+- **Pricing Section:** Optional packages with price ranges and CTA for scheduling a project discussion.  
+- **Technologies:** Tools and skills used for automation and data workflows.  
+- **About & Work Approach:** Background, process, and methodology.  
+- **Contact Section:** Email and WhatsApp for project inquiries.  
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## ⚙ Tech Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Frontend:** React, Tailwind CSS for styling  
+- **Icons:** Lucide React, react-icons  
+- **Animations:** Tailwind utilities (`animate-fade-in`)  
+- **Components:** Reusable UI components (Buttons, Cards)  
+- **Deployment:** Static hosting ready (Next.js/Vite compatible)  
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 📁 Project Structure
+src/
+├─ components/
+│ ├─ Hero.jsx
+│ ├─ Leistungen.jsx
+│ ├─ Cases.jsx
+│ ├─ Pricing.jsx
+│ ├─ About.jsx
+│ └─ Contact.jsx
+├─ pages/
+└─ assets/
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+---
+
+## 🚀 Getting Started
+
+1. Clone the repository:
+
+```bash
+git clone git@github.com:issi-tech-glitch/process-ai-works.git
+
+2. Install dependencies:
+
+npm install
+# or
+yarn install
+
+3. Start development server:
 npm run dev
-```
+# or
+yarn dev
 
-**Edit a file directly in GitHub**
+4. Build for production
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+npm run build
+# or
+yarn build
