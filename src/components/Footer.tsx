@@ -14,7 +14,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="text-sm text-muted-foreground">
-            © {currentYear} · Alle Rechte vorbehalten
+            © {currentYear} · Alle Rechte vorbehalten · Icons by <a href="https://www.icons8.com">Icons8</a>
           </p>
 
           {/* Links */}
