@@ -35,9 +35,6 @@ This is the personal website of **Clarissa Heinemann**, showcasing her freelance
 
 ---
 
-
----
-
 ## 🚀 Getting Started
 
 1. Clone the repository:
