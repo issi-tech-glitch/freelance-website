@@ -219,7 +219,7 @@ const About = () => {
                   <li className="flex items-start gap-3">
                     <ChevronRight className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
                     <span>
-                      Mehrjährige Erfahrung aus <span className="text-foreground font-medium">KI- und Datenprojekten</span>
+                      Mehrjährige Erfahrung aus <span className="text-foreground font-medium">KI- und Datenprojekten </span>
                       im Studium, in der Forschung und in der Praxis
                     </span>
                   </li>
