@@ -220,14 +220,14 @@ const About = () => {
                     <ChevronRight className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
                     <span>
                       Mehrjährige Erfahrung aus <span className="text-foreground font-medium">KI- und Datenprojekten </span>
-                      im Studium, in der Forschung und in der Praxis
+                      in der Forschung und in der Praxis
                     </span>
                   </li>
 
                   <li className="flex items-start gap-3">
                     <ChevronRight className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
                     <span>
-                      Projektbezogene Arbeit in <span className="text-foreground font-medium">Robotic Process Automation (RPA)</span>
+                      Projektbezogene Arbeit in <span className="text-foreground font-medium">Robotic Process Automation (RPA) </span>
                       und als <span className="text-foreground font-medium">Data Engineer</span>
                     </span>
                   </li>
