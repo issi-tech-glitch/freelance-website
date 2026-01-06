@@ -27,34 +27,81 @@ Max Mustermann`; // Habe Max Mustermann hinzugefügt, damit es klarer ist
             <main className="w-full px-4 pt-16 pb-16"> {/* Mehr Padding unten */}
                 <div className="max-w-[1400px] mx-auto">
 
-                    {/* Header & Navigation */}
-                    <div className="mb-10">
-                        <Link to="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-6 group">
+                    {/* Navigation - Linksbündig */}
+                    <div className="mb-8">
+                        <Link
+                            to="/"
+                            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors group"
+                        >
                             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
                             Zurück zur Übersicht
                         </Link>
-                        <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
+                    </div>
+
+                    {/* Header & Einleitung - Zentriert */}
+                    <div className="mb-16 flex flex-col items-center text-center">
+                        <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-8 max-w-5xl">
                             Live Demo: <span className="text-primary">KI-Bestellverarbeitung</span>
                         </h1>
+
+                        {/* Einleitung zum Case - Zentriert */}
+                        <div className="max-w-5xl mx-auto">
+                            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                                In diesem Szenario automatisieren wir eine klassische <span className="text-foreground font-medium">Schnittstelle zwischen Kunde und Lager</span>.
+                                Anstatt dass ein Mitarbeiter E-Mails händisch lesen und Daten in Excel oder ein CRM abtippen muss, übernimmt eine <span className="text-foreground font-medium">KI die strukturierte Extraktion</span>.
+                            </p>
+                        </div>
                     </div>
 
                     {/* Anleitung & Email-Draft Section */}
                     <div className="grid lg:grid-cols-2 gap-8 mb-16"> {/* Mehr Abstand zum Dashboard */}
                         <div className="space-y-6">
-                            <div className="bg-card border border-border p-6 rounded-2xl">
-                                <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-[12px] text-primary-foreground">1</span>
+                            <div className="bg-card border border-border p-6 md:p-8 rounded-2xl shadow-sm">
+                                <h2 className="text-xl font-semibold mb-6 flex items-center gap-3">
+                                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-[13px] text-primary-foreground font-mono">1</span>
                                     Probiere es selbst aus
                                 </h2>
-                                <p className="text-muted-foreground leading-relaxed mb-4">
-                                    Schicke eine E-Mail an <strong className="text-foreground">{emailTarget}</strong>.
-                                    Such dir dafür im Lagerbestand unten <strong className="text-foreground">SKUs</strong> aus und schicke sie mit der <strong className="text-foreground">gewünschten Menge</strong> und deinem <strong className="text-foreground">Vornamen</strong> in einer Freitext-E-Mail.
-                                    Eine KI extrahiert diese Daten automatisch. Du wirst die Bestellung dann nach kurzer Zeit im Dashboard sehen.
-                                    Schreibe deine eigene Email oder kopiere einfach den bereitgestellten Entwurf.
-                                </p>
-                                <div className="flex items-start gap-3 p-4 bg-blue-500/5 rounded-xl border border-blue-500/10 text-sm text-muted-foreground">
-                                    <Info className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
-                                    <p>Keine Sorge: Es werden nur Vorname und Bestelldaten angezeigt. Alle Daten werden nach 24h automatisch gelöscht. Die Bestellung dient ausschließlich zu Demonstrationszwecken - es werden keine echten Produkte.</p>
+
+                                {/* Strukturierte Schritte statt Fließtext */}
+                                <div className="space-y-4 mb-8">
+                                    <div className="flex gap-3">
+                                        <div className="mt-1 bg-primary/10 p-1 rounded-md h-fit">
+                                            <Mail className="w-4 h-4 text-primary" />
+                                        </div>
+                                        <p className="text-muted-foreground text-sm leading-relaxed">
+                                            Schicke eine Freitext E-Mail an: <br />
+                                            <strong className="text-foreground font-semibold">{emailTarget}</strong>
+                                        </p>
+                                    </div>
+
+                                    <div className="flex gap-3">
+                                        <div className="mt-1 bg-primary/10 p-1 rounded-md h-fit">
+                                            <Database className="w-4 h-4 text-primary" />
+                                        </div>
+                                        <p className="text-muted-foreground text-sm leading-relaxed">
+                                            Nenne darin eine <strong className="text-foreground">SKU</strong> (siehe Lagerbestand im Dashboard),
+                                            die <strong className="text-foreground">Menge</strong> und deinen <strong className="text-foreground">Vornamen</strong>.
+                                        </p>
+                                    </div>
+
+                                    <div className="flex gap-3">
+                                        <div className="mt-1 bg-primary/10 p-1 rounded-md h-fit">
+                                            <Zap className="w-4 h-4 text-primary" />
+                                        </div>
+                                        <p className="text-muted-foreground text-sm leading-relaxed">
+                                            Die Email wird automatisiert verarbeitet. Klicke nach ca. 1-2 Min. auf
+                                            <strong className="text-foreground font-medium"> "Daten aktualisieren"</strong> im Dashboard.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* Info-Box mit klarer Trennung */}
+                                <div className="flex items-start gap-3 p-4 bg-blue-500/5 rounded-xl border border-blue-500/10 text-[13px] text-muted-foreground leading-snug">
+                                    <Info className="w-5 h-5 text-blue-500 shrink-0" />
+                                    <div className="space-y-1">
+                                        <p><strong className="text-blue-700/80">Datenschutz:</strong> Nur Vorname und Bestelldaten werden angezeigt. Löschung erfolgt automatisch nach 24h.</p>
+                                        <p><strong className="text-blue-700/80">Hinweis:</strong> Dies ist eine reine Demo. Es werden keine echten Waren versendet.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -188,18 +235,36 @@ Max Mustermann`; // Habe Max Mustermann hinzugefügt, damit es klarer ist
                         </div>
                     </div>
                     <div className="mt-20 flex flex-col items-center text-center">
-                        <h3 className="text-2xl font-bold mb-6">Bereit für deine eigene Automatisierung?</h3>
-                        <Link to="/#kontakt">
-                            <Button
-                                variant="hero"
-                                size="xl"
-                                className="group"
-                            >
-                                Jetzt Projekt besprechen
-                                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                            </Button>
-                        </Link>
-                        <p className="mt-4 text-sm text-muted-foreground">
+                        <h3 className="text-2xl font-bold mb-6 text-balance">
+                            Bereit für deine eigene Automatisierung?
+                        </h3>
+
+                        {/* Button-Container: Auf Mobile untereinander, auf Desktop nebeneinander */}
+                        <div className="flex flex-col sm:flex-row gap-4 items-center">
+                            <Link to="/#kontakt">
+                                <Button
+                                    variant="hero"
+                                    size="xl"
+                                    className="group w-full sm:w-auto"
+                                >
+                                    Jetzt Kontakt aufnehmen
+                                    <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                                </Button>
+                            </Link>
+
+                            {/* NEU: Button für Leistungen */}
+                            <Link to="/#leistungen">
+                                <Button
+                                    variant="hero-outline" // Nutzt den Outline-Stil für weniger Dominanz als der Haupt-Button
+                                    size="xl"
+                                    className="w-full sm:w-auto"
+                                >
+                                    Leistungen entdecken
+                                </Button>
+                            </Link>
+                        </div>
+
+                        <p className="mt-6 text-sm text-muted-foreground">
                             Kostenloses Erstgespräch • 100% unverbindlich
                         </p>
                     </div>
