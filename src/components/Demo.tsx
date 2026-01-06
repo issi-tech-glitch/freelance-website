@@ -47,9 +47,7 @@ Max Mustermann`; // Habe Max Mustermann hinzugefügt, damit es klarer ist
                         {/* Einleitung zum Case - Zentriert */}
                         <div className="max-w-5xl mx-auto">
                             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                                In diesem Szenario automatisieren wir eine klassische <span className="text-foreground font-medium">Schnittstelle zwischen Kunde und Lager</span>.
-                                Anstatt dass ein Mitarbeiter E-Mails händisch lesen und Daten in Excel oder ein CRM abtippen muss, übernimmt eine <span className="text-foreground font-medium">KI die strukturierte Extraktion</span>.
-                            </p>
+                               Wir automatisieren den Weg von der E-Mail direkt in die Datenbank. Eine KI analysiert Freitext-Bestellungen und überführt sie in strukturierte Datensätze. Das Ergebnis ist eine <span className="text-foreground font-medium">nahtlose Lager-Synchronisation</span> ohne manuelle Reibungsverluste.</p>
                         </div>
                     </div>
 
