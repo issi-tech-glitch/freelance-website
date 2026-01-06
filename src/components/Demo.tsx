@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Copy, Check, Mail, Info, ChevronRight } from "lucide-react"; // ChevronRight für Icons in der Flow-Sektion
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, ArrowRight, Copy, Check, Mail, Info, ChevronRight, Cpu, BarChart3, Database, Zap } from "lucide-react"; // ChevronRight für Icons in der Flow-Sektion
 
 const Demo = () => {
     const [copied, setCopied] = useState(false);
@@ -39,24 +40,24 @@ Max Mustermann`; // Habe Max Mustermann hinzugefügt, damit es klarer ist
 
                     {/* Anleitung & Email-Draft Section */}
                     <div className="grid lg:grid-cols-2 gap-8 mb-16"> {/* Mehr Abstand zum Dashboard */}
-            <div className="space-y-6">
-              <div className="bg-card border border-border p-6 rounded-2xl">
-                <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-[12px] text-primary-foreground">1</span>
-                  Probiere es selbst aus
-                </h2>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Schicke eine E-Mail an <strong className="text-foreground">{emailTarget}</strong>. 
-                  Such dir dafür im Lagerbestand unten <strong className="text-foreground">SKUs</strong> aus und schicke sie mit der <strong className="text-foreground">gewünschten Menge</strong> und deinem <strong className="text-foreground">Vornamen</strong> in einer Freitext-E-Mail.
-                  Eine KI extrahiert diese Daten automatisch. Du wirst die Bestellung dann nach kurzer Zeit im Dashboard sehen.
-                  Schreibe deine eigene Email oder kopiere einfach den bereitgestellten Entwurf.
-                </p>
-                <div className="flex items-start gap-3 p-4 bg-blue-500/5 rounded-xl border border-blue-500/10 text-sm text-muted-foreground">
-                  <Info className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
-                  <p>Keine Sorge: Es werden nur Vorname und Bestelldaten angezeigt. Alle Daten werden nach 24h automatisch gelöscht. Die Bestellung dient ausschließlich zu Demonstrationszwecken - es werden keine echten Produkte.</p>
-                </div>
-              </div>
-            </div>
+                        <div className="space-y-6">
+                            <div className="bg-card border border-border p-6 rounded-2xl">
+                                <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
+                                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-[12px] text-primary-foreground">1</span>
+                                    Probiere es selbst aus
+                                </h2>
+                                <p className="text-muted-foreground leading-relaxed mb-4">
+                                    Schicke eine E-Mail an <strong className="text-foreground">{emailTarget}</strong>.
+                                    Such dir dafür im Lagerbestand unten <strong className="text-foreground">SKUs</strong> aus und schicke sie mit der <strong className="text-foreground">gewünschten Menge</strong> und deinem <strong className="text-foreground">Vornamen</strong> in einer Freitext-E-Mail.
+                                    Eine KI extrahiert diese Daten automatisch. Du wirst die Bestellung dann nach kurzer Zeit im Dashboard sehen.
+                                    Schreibe deine eigene Email oder kopiere einfach den bereitgestellten Entwurf.
+                                </p>
+                                <div className="flex items-start gap-3 p-4 bg-blue-500/5 rounded-xl border border-blue-500/10 text-sm text-muted-foreground">
+                                    <Info className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
+                                    <p>Keine Sorge: Es werden nur Vorname und Bestelldaten angezeigt. Alle Daten werden nach 24h automatisch gelöscht. Die Bestellung dient ausschließlich zu Demonstrationszwecken - es werden keine echten Produkte.</p>
+                                </div>
+                            </div>
+                        </div>
 
                         <div className="bg-card border border-border p-6 rounded-2xl relative">
                             <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
@@ -110,7 +111,7 @@ Max Mustermann`; // Habe Max Mustermann hinzugefügt, damit es klarer ist
                         </div>
                     </div>
 
-                    {/* SEKTION: Wie es funktioniert mit Icons8 */}
+                    {/* SEKTION: Wie es funktioniert (Clean Layout) */}
                     <div className="bg-card border border-border p-8 md:p-12 rounded-2xl shadow-xl mt-16">
                         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
                             So funktioniert's: Volle Automatisierung
@@ -122,64 +123,86 @@ Max Mustermann`; // Habe Max Mustermann hinzugefügt, damit es klarer ist
 
                         <div className="flex flex-col lg:flex-row items-center justify-center space-y-8 lg:space-y-0 lg:space-x-4">
 
-                            {/* Step 1: Email */}
-                            <div className="flex flex-col items-center text-center max-w-[200px]">
-                                <div className="w-20 h-20 flex items-center justify-center mb-4 p-2 bg-primary/5 rounded-2xl">
-                                    <img src="https://img.icons8.com/fluency/96/mail.png" alt="Email Icon" title="Icons8" />
+                            {/* Step 1: Mail */}
+                            <div className="flex flex-col items-center text-center max-w-[200px] group">
+                                <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
+                                    <Mail className="w-8 h-8 text-primary" strokeWidth={1.5} />
                                 </div>
-                                <h3 className="font-semibold mb-2">1. E-Mail Eingang</h3>
-                                <p className="text-sm text-muted-foreground">Du schickst eine E-Mail mit deiner Bestellung.</p>
+                                <h3 className="font-semibold text-sm mb-2 uppercase tracking-wider">1. Eingang</h3>
+                                <p className="text-xs text-muted-foreground leading-relaxed">
+                                    Erhalt der Bestellung per E-Mail (unstrukturiert).
+                                </p>
                             </div>
 
-                            <ChevronRight className="w-8 h-8 text-muted-foreground/30 rotate-90 lg:rotate-0 flex-shrink-0" />
+                            <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 flex-shrink-0 mt-[-40px]" />
 
-                            {/* Step 2: Make.com */}
-                            <div className="flex flex-col items-center text-center max-w-[200px]">
-                                <div className="w-20 h-20 flex items-center justify-center mb-4 p-2 bg-primary/5 rounded-2xl">
-                                    <img src="https://img.icons8.com/fluency/96/workflow.png" alt="Make Workflow Icon" title="Icons8" />
+                            {/* Step 2: Make */}
+                            <div className="flex flex-col items-center text-center max-w-[200px] group">
+                                <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
+                                    <Zap className="w-8 h-8 text-primary" strokeWidth={1.5} />
                                 </div>
-                                <h3 className="font-semibold mb-2">2. Automatisierung</h3>
-                                <p className="text-sm text-muted-foreground">Make.com registriert den Eingang sofort per Webhook.</p>
+                                <h3 className="font-semibold text-sm mb-2 uppercase tracking-wider">2. Trigger</h3>
+                                <p className="text-xs text-muted-foreground leading-relaxed">
+                                    Make.com erkennt die Mail und startet den Prozess.
+                                </p>
                             </div>
 
-                            <ChevronRight className="w-8 h-8 text-muted-foreground/30 rotate-90 lg:rotate-0 flex-shrink-0" />
+                            <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 flex-shrink-0 mt-[-40px]" />
 
-                            {/* Step 3: Gemini / AI */}
-                            <div className="flex flex-col items-center text-center max-w-[200px]">
-                                <div className="w-20 h-20 flex items-center justify-center mb-4 p-2 bg-primary/5 rounded-2xl">
-                                    <img src="https://img.icons8.com/color/48/bard--v1.png" alt="AI Icon" title="Icons8" />
+                            {/* Step 3: AI */}
+                            <div className="flex flex-col items-center text-center max-w-[200px] group">
+                                <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
+                                    <Cpu className="w-8 h-8 text-primary" strokeWidth={1.5} />
                                 </div>
-                                <h3 className="font-semibold mb-2">3. KI-Extraktion</h3>
-                                <p className="text-sm text-muted-foreground">Gemini liest den Freitext und strukturiert die Daten.</p>
+                                <h3 className="font-semibold text-sm mb-2 uppercase tracking-wider">3. Analyse</h3>
+                                <p className="text-xs text-muted-foreground leading-relaxed">
+                                    KI (Gemini) extrahiert Daten aus dem Freitext.
+                                </p>
                             </div>
 
-                            <ChevronRight className="w-8 h-8 text-muted-foreground/30 rotate-90 lg:rotate-0 flex-shrink-0" />
+                            <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 flex-shrink-0 mt-[-40px]" />
 
-                            {/* Step 4: Supabase */}
-                            <div className="flex flex-col items-center text-center max-w-[200px]">
-                                <div className="w-20 h-20 flex items-center justify-center mb-4 p-2 bg-primary/5 rounded-2xl">
-                                    <img src="https://img.icons8.com/fluency/96/database.png" alt="Database Icon" title="Icons8" />
+                            {/* Step 4: Database */}
+                            <div className="flex flex-col items-center text-center max-w-[200px] group">
+                                <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
+                                    <Database className="w-8 h-8 text-primary" strokeWidth={1.5} />
                                 </div>
-                                <h3 className="font-semibold mb-2">4. Datenbank</h3>
-                                <p className="text-sm text-muted-foreground">Sichere Speicherung der Bestellung in Supabase.</p>
+                                <h3 className="font-semibold text-sm mb-2 uppercase tracking-wider">4. Storage</h3>
+                                <p className="text-xs text-muted-foreground leading-relaxed">
+                                    Speicherung der Datensätze in Supabase.
+                                </p>
                             </div>
 
-                            <ChevronRight className="w-8 h-8 text-muted-foreground/30 rotate-90 lg:rotate-0 flex-shrink-0" />
+                            <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 flex-shrink-0 mt-[-40px]" />
 
                             {/* Step 5: Dashboard */}
-                            <div className="flex flex-col items-center text-center max-w-[200px]">
-                                <div className="w-20 h-20 flex items-center justify-center mb-4 p-2 bg-primary/5 rounded-2xl">
-                                    <img src="https://img.icons8.com/nolan/64/control-panel.png" alt="Dashboard Icon" title="Icons8" />
+                            <div className="flex flex-col items-center text-center max-w-[200px] group">
+                                <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
+                                    <BarChart3 className="w-8 h-8 text-primary" strokeWidth={1.5} />
                                 </div>
-                                <h3 className="font-semibold mb-2">5. Live-Ansicht</h3>
-                                <p className="text-sm text-muted-foreground">Aktualisierung des Dashboards in Echtzeit.</p>
+                                <h3 className="font-semibold text-sm mb-2 uppercase tracking-wider">5. Live</h3>
+                                <p className="text-xs text-muted-foreground leading-relaxed">
+                                    Visualisierung im Streamlit-Dashboard.
+                                </p>
                             </div>
-
                         </div>
-
-
                     </div>
-
+                    <div className="mt-20 flex flex-col items-center text-center">
+                        <h3 className="text-2xl font-bold mb-6">Bereit für deine eigene Automatisierung?</h3>
+                        <Link to="/#kontakt">
+                            <Button
+                                variant="hero"
+                                size="xl"
+                                className="group"
+                            >
+                                Jetzt Projekt besprechen
+                                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                            </Button>
+                        </Link>
+                        <p className="mt-4 text-sm text-muted-foreground">
+                            Kostenloses Erstgespräch • 100% unverbindlich
+                        </p>
+                    </div>
                 </div>
             </main>
         </div>
