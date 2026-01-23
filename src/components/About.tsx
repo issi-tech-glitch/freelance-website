@@ -30,8 +30,10 @@ const techGroups = [
     items: [
       { name: "Python", icon: "/icons/python.svg" },
       { name: "Make", icon: "/icons/make.svg" },
+      { name: "n8n", icon: "/icons/n8n.svg" },
       { name: "UiPath", icon: "/icons/uipath.svg" },
       { name: "FastAPI", icon: "/icons/fastapi.svg" },
+      { name: "AWS", icon: "https://img.icons8.com/color/48/amazon-web-services.png" },
     ],
   },
   {

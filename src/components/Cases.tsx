@@ -1,9 +1,9 @@
 const cases = [
   {
     problem: "Ein Agentur-Team verbringt jeden Tag 2+ Stunden damit, Daten aus E-Mails manuell in ihr CRM zu übertragen.",
-    solution: "Automatischer E-Mail-Parser mit KI-Extraktion und direkter CRM-Integration via Make.",
+    solution: "Automatischer E-Mail-Parser mit KI-Extraktion und direkter CRM-Integration via n8n.",
     result: "90% Zeitersparnis bei der Dateneingabe. Team kann sich auf Kundenbeziehungen konzentrieren.",
-    tags: ["E-Mail Parsing", "CRM Integration", "Make"],
+    tags: ["E-Mail Parsing", "CRM Integration", "n8n", "odoo"],
   },
   {
     problem: "Ein Startup muss wöchentlich Reportings aus 5 verschiedenen Tools manuell zusammenstellen.",
