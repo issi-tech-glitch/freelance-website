@@ -159,7 +159,7 @@ Max Mustermann`; // Habe Max Mustermann hinzugefügt, damit es klarer ist
                     {/* SEKTION: Wie es funktioniert (Clean Layout) */}
                     <div className="bg-card border border-border p-8 md:p-12 rounded-2xl shadow-xl mt-16">
                         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
-                            So funktioniert's: Volle Automatisierung
+                            So funktioniert's: Vollständige Automatisierung
                         </h2>
                         <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
                             Jede E-Mail wird intelligent verarbeitet, ohne manuelles Zutun.
