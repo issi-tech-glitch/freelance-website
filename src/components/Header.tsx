@@ -74,14 +74,22 @@ const Header = () => {
                   onMouseEnter={() => setShowProjectsMenu(true)}
                   onMouseLeave={() => setShowProjectsMenu(false)}
                 >
-                  <button
-                    onClick={() => setShowProjectsMenu(!showProjectsMenu)}
-                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors link-underline"
-                    aria-expanded={showProjectsMenu}
-                  >
-                    {item.name}
-                    <ChevronDown className="w-4 h-4" />
-                  </button>
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => handleNavClick(item.href)}
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors link-underline"
+                    >
+                      {item.name}
+                    </button>
+
+                    <button
+                      onClick={(e) => { e.stopPropagation(); setShowProjectsMenu(!showProjectsMenu); }}
+                      aria-expanded={showProjectsMenu}
+                      className="p-1"
+                    >
+                      <ChevronDown className="w-4 h-4 text-muted-foreground" />
+                    </button>
+                  </div>
 
                   {showProjectsMenu && (
                     <div className="absolute top-full left-0 w-96 min-w-[22rem] bg-background border border-border/60 rounded-2xl shadow-2xl p-2">
@@ -144,13 +152,20 @@ const Header = () => {
               if (item.hasSubmenu) {
                 return (
                   <div key={item.name} className="flex flex-col">
-                    <button
-                      onClick={() => setShowMobileProjects(!showMobileProjects)}
-                      className="flex items-center justify-between py-2 text-left text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      <span>{item.name}</span>
-                      <ChevronDown className="w-4 h-4" />
-                    </button>
+                    <div className="flex items-center justify-between">
+                      <button
+                        onClick={() => { setIsMobileMenuOpen(false); handleNavClick(item.href); }}
+                        className="py-2 text-left text-muted-foreground hover:text-foreground transition-colors"
+                      >
+                        <span>{item.name}</span>
+                      </button>
+                      <button
+                        onClick={() => setShowMobileProjects(!showMobileProjects)}
+                        className="p-2"
+                      >
+                        <ChevronDown className="w-4 h-4" />
+                      </button>
+                    </div>
                     {showMobileProjects && (
                       <div className="pl-4 flex flex-col gap-2 mt-2">
                         {cases.map((p) => (
