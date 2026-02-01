@@ -1,11 +1,6 @@
 import cases from "@/constants/cases";
 
 const Cases = () => {
-  const caseSlugs = [
-    "/projekte/email-kundendaten-erfassung",
-    "/projekte/automatisiertes-wochen-reporting",
-    "/projekte/bestell-lager-automatisierung",
-  ];
   return (
     <section id="projekte" className="section-padding">
       <div className="container-section">
@@ -75,7 +70,7 @@ const Cases = () => {
               </div>
               <div className="mt-8">
                 <a
-                  href={caseSlugs[index]}
+                  href={caseItem.href}
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
                 >
                   {caseItem.buttonText}
