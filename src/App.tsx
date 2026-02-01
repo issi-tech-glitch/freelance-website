@@ -9,7 +9,9 @@ import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Demo from "./components/Demo";
+import ProjektEmail from "./pages/ProjektEmail";
+import ProjektReporting from "./pages/ProjektReporting";
+import ProjektBestell from "./pages/ProjektBestell";
 
 const queryClient = new QueryClient();
 
@@ -22,7 +24,9 @@ const App = () => (
         <Header />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/demo" element={<Demo />} /> {/* Hier ist sie! */}
+          <Route path="/projekte/email-kundendaten-erfassung" element={<ProjektEmail />} />
+          <Route path="/projekte/automatisiertes-wochen-reporting" element={<ProjektReporting />} />
+          <Route path="/projekte/bestell-lager-automatisierung" element={<ProjektBestell />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

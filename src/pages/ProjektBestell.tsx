@@ -1,9 +1,9 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight, Copy, Check, Mail, Info, ChevronRight, Cpu, BarChart3, Database, Zap } from "lucide-react"; // ChevronRight für Icons in der Flow-Sektion
 
-const Demo = () => {
+const ProjektBestell = () => {
     const [copied, setCopied] = useState(false);
 
     const emailTarget = "demo@clarissa-heinemann.de";
@@ -272,4 +272,4 @@ Max Mustermann`; // Habe Max Mustermann hinzugefügt, damit es klarer ist
     );
 };
 
-export default Demo;
+export default ProjektBestell;

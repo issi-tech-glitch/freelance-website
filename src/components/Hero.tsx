@@ -24,7 +24,7 @@ const Hero = () => {
             </div>
             
             {/* NEU: Auffälliges Demo-Badge */}
-            <Link to="/demo" className="group">
+            <Link to="/projekte/bestell-lager-automatisierung" className="group">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent border border-accent/20 hover:bg-accent/20 transition-all cursor-pointer shadow-[0_0_15px_rgba(var(--accent-rgb),0.1)]">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
@@ -57,7 +57,7 @@ const Hero = () => {
                 </Button>
                 
                 {/* NEU: Sekundärer Demo-Link mit Icon */}
-                <Link to="/demo" className="group flex items-center gap-2 text-foreground font-medium hover:text-primary transition-colors">
+                <Link to="/projekte/bestell-lager-automatisierung" className="group flex items-center gap-2 text-foreground font-medium hover:text-primary transition-colors">
                   <PlayCircle className="w-6 h-6 text-primary transition-transform group-hover:scale-110" />
                   <div className="flex flex-col items-start leading-none">
                     <span>Live-Case ansehen</span>

@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import cases from "@/constants/cases";
 
 const navigation = [
-  { name: "Leistungen", href: "leistungen" }, // Removed # for easier handling
-  { name: "Beispiele", href: "beispiele" },
+  { name: "Leistungen", href: "leistungen" },
+  { name: "Projekte", href: "projekte", hasSubmenu: true },
   { name: "Über mich", href: "ueber-mich" },
   { name: "Preise", href: "pricing" },
   { name: "Arbeitsweise", href: "arbeitsweise" },
@@ -14,6 +15,8 @@ const navigation = [
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showProjectsMenu, setShowProjectsMenu] = useState(false);
+  const [showMobileProjects, setShowMobileProjects] = useState(false);
   
   const location = useLocation();
   const navigate = useNavigate();
@@ -30,13 +33,16 @@ const Header = () => {
     setIsMobileMenuOpen(false);
 
     if (location.pathname === "/") {
-      // We are already on home, just scroll
       const element = document.getElementById(sectionId);
       element?.scrollIntoView({ behavior: "smooth" });
     } else {
-      // Navigate to home with the hash
       navigate(`/#${sectionId}`);
     }
+  };
+
+  const goTo = (href: string) => {
+    setIsMobileMenuOpen(false);
+    navigate(href);
   };
 
   return (
@@ -59,15 +65,55 @@ const Header = () => {
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
-          {navigation.map((item) => (
-            <button
-              key={item.name}
-              onClick={() => handleNavClick(item.href)}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors link-underline"
-            >
-              {item.name}
-            </button>
-          ))}
+          {navigation.map((item) => {
+            if (item.hasSubmenu) {
+              return (
+                <div
+                  key={item.name}
+                  className="relative"
+                  onMouseEnter={() => setShowProjectsMenu(true)}
+                  onMouseLeave={() => setShowProjectsMenu(false)}
+                >
+                  <button
+                    onClick={() => setShowProjectsMenu(!showProjectsMenu)}
+                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors link-underline"
+                    aria-expanded={showProjectsMenu}
+                  >
+                    {item.name}
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+
+                  {showProjectsMenu && (
+                    <div className="absolute top-full left-0 w-96 min-w-[22rem] bg-background border border-border/60 rounded-2xl shadow-2xl p-2">
+                      <div className="flex flex-col divide-y divide-border/50 rounded-lg overflow-hidden">
+                        {cases.map((p) => (
+                          <Link
+                            key={p.href}
+                            to={p.href}
+                            onClick={() => setShowProjectsMenu(false)}
+                            className="flex items-center gap-3 px-4 py-3 text-sm font-medium hover:bg-muted transition-colors whitespace-nowrap overflow-hidden text-ellipsis"
+                          >
+                            <span className="inline-block w-2 h-2 rounded-full bg-primary/80" />
+                            <span className="truncate">{p.name}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              );
+            }
+
+            return (
+              <button
+                key={item.name}
+                onClick={() => handleNavClick(item.href)}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors link-underline"
+              >
+                {item.name}
+              </button>
+            );
+          })}
           <Button
             size="sm"
             onClick={() => handleNavClick("kontakt")}
@@ -94,15 +140,45 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-border">
           <nav className="container-section py-6 flex flex-col gap-4">
-            {navigation.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => handleNavClick(item.href)}
-                className="text-left py-2 text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {item.name}
-              </button>
-            ))}
+            {navigation.map((item) => {
+              if (item.hasSubmenu) {
+                return (
+                  <div key={item.name} className="flex flex-col">
+                    <button
+                      onClick={() => setShowMobileProjects(!showMobileProjects)}
+                      className="flex items-center justify-between py-2 text-left text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      <span>{item.name}</span>
+                      <ChevronDown className="w-4 h-4" />
+                    </button>
+                    {showMobileProjects && (
+                      <div className="pl-4 flex flex-col gap-2 mt-2">
+                        {cases.map((p) => (
+                          <Link
+                            key={p.href}
+                            to={p.href}
+                            onClick={() => { setIsMobileMenuOpen(false); setShowMobileProjects(false); }}
+                            className="block py-3 px-3 rounded-lg text-sm font-medium text-muted-foreground hover:bg-muted transition-colors whitespace-nowrap overflow-hidden text-ellipsis"
+                          >
+                            {p.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              return (
+                <button
+                  key={item.name}
+                  onClick={() => handleNavClick(item.href)}
+                  className="text-left py-2 text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {item.name}
+                </button>
+              );
+            })}
             <Button
               className="mt-2"
               onClick={() => handleNavClick("kontakt")}
