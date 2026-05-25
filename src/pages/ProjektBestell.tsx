@@ -148,7 +148,7 @@ Max Mustermann`; // Habe Max Mustermann hinzugefügt, damit es klarer ist
 
                         <div className="relative w-full h-[80vh] min-h-[600px] bg-white">
                             <iframe
-                                src="https://demo-order-dashboard-heinemann.streamlit.app/?embed=true"
+                                src="https://streamlit.clarissa-heinemann.de/demo-order-dashboard"
                                 className="absolute top-0 left-0 w-full h-full border-none"
                                 title="Bestell Dashboard Demo"
                                 allow="clipboard-read; clipboard-write"
