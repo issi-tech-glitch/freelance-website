@@ -174,9 +174,15 @@ export default function Pia() {
               )}
             </button>
           </div>
-          <p className="text-xs text-muted-foreground text-center mt-2">
-            Enter zum Senden · Shift+Enter für neue Zeile
-          </p>
+          <div className="text-xs text-muted-foreground text-center mt-2 space-y-0.5">
+            <p>Enter zum Senden · Shift+Enter für neue Zeile</p>
+            <p className="text-muted-foreground/60">
+              Nachrichten werden durch Google Gemini verarbeitet.{' '}
+              <a href="/datenschutz" className="underline hover:text-muted-foreground transition-colors">
+                Datenschutz
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -118,26 +118,34 @@ export function ChatWidget() {
           </div>
 
           {/* Input */}
-          <div className="p-3 border-t border-border/50 flex gap-2 items-end flex-shrink-0">
-            <textarea
-              ref={inputRef}
-              value={input}
-              onChange={handleInput}
-              onKeyDown={handleKeyDown}
-              placeholder="Frag Pia etwas…"
-              rows={1}
-              disabled={isStreaming}
-              className="flex-1 resize-none rounded-xl border border-border bg-muted/50 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 placeholder:text-muted-foreground disabled:opacity-50 max-h-24"
-            />
-            <button
-              onClick={handleSend}
-              disabled={!input.trim() || isStreaming}
-              className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 disabled:opacity-40 disabled:cursor-not-allowed transition-all hover:scale-105 active:scale-95"
-              style={{ background: 'var(--gradient-primary)' }}
-              aria-label="Senden"
-            >
-              <Send className="w-4 h-4 text-white" />
-            </button>
+          <div className="p-3 border-t border-border/50 flex-shrink-0">
+            <div className="flex gap-2 items-end">
+              <textarea
+                ref={inputRef}
+                value={input}
+                onChange={handleInput}
+                onKeyDown={handleKeyDown}
+                placeholder="Frag Pia etwas…"
+                rows={1}
+                disabled={isStreaming}
+                className="flex-1 resize-none rounded-xl border border-border bg-muted/50 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 placeholder:text-muted-foreground disabled:opacity-50 max-h-24"
+              />
+              <button
+                onClick={handleSend}
+                disabled={!input.trim() || isStreaming}
+                className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 disabled:opacity-40 disabled:cursor-not-allowed transition-all hover:scale-105 active:scale-95"
+                style={{ background: 'var(--gradient-primary)' }}
+                aria-label="Senden"
+              >
+                <Send className="w-4 h-4 text-white" />
+              </button>
+            </div>
+            <p className="text-[10px] text-muted-foreground/60 text-center mt-1.5">
+              Nachrichten werden durch Google Gemini verarbeitet.{' '}
+              <a href="/datenschutz" className="underline hover:text-muted-foreground transition-colors">
+                Datenschutz
+              </a>
+            </p>
           </div>
         </div>
       )}
