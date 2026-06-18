@@ -18,12 +18,12 @@ const cases = [
         buttonText: "Projekt ansehen",
     },
     {
-        problem: "Ein Startup muss wöchentlich Reportings aus 5 verschiedenen Tools manuell zusammenstellen.",
-        solution: "Automatisierter Reporting-Workflow mit API-Anbindungen und automatischer PDF-Generierung.",
-        result: "Von 4 Stunden auf 15 Minuten. Reports gehen jetzt automatisch jeden Montag raus.",
-        tags: ["API Integration", "Automatisches Reporting", "PDF Generierung", "Workflow Automation"],
-        name: "Cross-Platform Reporting Engine",
-        href: "/projekte/automatisiertes-wochen-reporting",
+        problem: "Website-Besucher haben keine schnelle Möglichkeit, häufige Fragen zu Leistungen, Preisen und Projekten selbstständig zu klären.",
+        solution: "KI-Chatbot-Agent mit Gemini 2.5 Flash, eigenem FastAPI-Backend und n8n-Automatisierung für Kontakterfassung und Qualitätssicherung.",
+        result: "24/7 Verfügbarkeit, automatische Lead-Erfassung per Tool-Calling, lernfähiges System durch Dokumentation unbeantworteter Fragen.",
+        tags: ["KI-Agent", "FastAPI", "Gemini 2.5 Flash", "n8n", "Tool-Calling"],
+        name: "Pia – KI-Chatbot & Agent",
+        href: "/projekte/pia-projektbeschreibung",
         buttonText: "Projekt ansehen",
     },
 ];

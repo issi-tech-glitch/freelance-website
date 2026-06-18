@@ -10,7 +10,7 @@ import Datenschutz from "./pages/Datenschutz";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ProjektEmail from "./pages/ProjektEmail";
-import ProjektReporting from "./pages/ProjektReporting";
+import ProjektPia from "./pages/ProjektPia";
 import ProjektBestell from "./pages/ProjektBestell";
 import Pia from "./pages/Pia";
 import { ChatProvider } from "./contexts/ChatContext";
@@ -30,7 +30,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/pia" element={<Pia />} />
             <Route path="/projekte/email-kundendaten-erfassung" element={<ProjektEmail />} />
-            <Route path="/projekte/automatisiertes-wochen-reporting" element={<ProjektReporting />} />
+            <Route path="/projekte/pia-projektbeschreibung" element={<ProjektPia />} />
             <Route path="/projekte/bestell-lager-automatisierung" element={<ProjektBestell />} />
             <Route path="/impressum" element={<Impressum />} />
             <Route path="/datenschutz" element={<Datenschutz />} />
