@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Bot, Send, RotateCcw, Loader2, Sparkles } from 'lucide-react';
 import { useChat } from '@/contexts/ChatContext';
+import { SimpleMarkdown } from '@/components/SimpleMarkdown';
 import { SUGGESTIONS, WELCOME } from '@/constants/pia';
 
 export default function Pia() {
@@ -76,7 +77,7 @@ export default function Pia() {
               <Bot className="w-4 h-4 text-primary" />
             </div>
             <div className="bg-muted rounded-2xl rounded-bl-sm px-4 py-3 max-w-[80%]">
-              <p className="text-sm text-foreground">{WELCOME}</p>
+              <SimpleMarkdown content={WELCOME} className="text-foreground" />
             </div>
           </div>
 
@@ -128,7 +129,7 @@ export default function Pia() {
                       ))}
                     </div>
                   ) : (
-                    <p className="text-sm text-foreground whitespace-pre-wrap">{msg.content}</p>
+                    <SimpleMarkdown content={msg.content} className="text-foreground" />
                   )}
                 </div>
               </div>
