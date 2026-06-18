@@ -7,12 +7,21 @@ import { WELCOME } from '@/constants/pia';
 
 export function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const [input, setInput] = useState('');
   const { messages, isStreaming, sendMessage, clearMessages } = useChat();
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const location = useLocation();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 639px)');
+    setIsMobile(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
 
   useEffect(() => {
     if (isOpen) {
@@ -150,7 +159,13 @@ export function ChatWidget() {
 
       {/* FAB */}
       <button
-        onClick={() => setIsOpen(prev => !prev)}
+        onClick={() => {
+          if (isMobile) {
+            navigate('/pia');
+          } else {
+            setIsOpen(prev => !prev);
+          }
+        }}
         className="w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95"
         style={{ background: 'var(--gradient-primary)' }}
         aria-label={isOpen ? 'Chat schließen' : 'Chat mit Pia öffnen'}
