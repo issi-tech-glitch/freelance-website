@@ -1,17 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Bot, Send, RotateCcw, Loader2, Sparkles } from 'lucide-react';
 import { useChat } from '@/contexts/ChatContext';
-import { SimpleMarkdown } from '@/components/SimpleMarkdown';
-
-const WELCOME =
-  'Hallo! Ich bin Pia, die KI-Assistentin von Clarissa Heinemann. Ich beantworte gerne deine Fragen zu Clarissas Lebenslauf und Erfahrungen. Wie kann ich dir helfen?';
-
-const SUGGESTIONS = [
-  'Welche Erfahrungen bringt Clarissa mit?',
-  'Welche Projekte hat Clarissa bisher umgesetzt?',
-  'Welche Technologien nutzt Clarissa?',
-  'Kann Clarissa mich zu KI-Themen beraten?',
-];
+import { SUGGESTIONS, WELCOME } from '@/constants/pia';
 
 export default function Pia() {
   const [input, setInput] = useState('');
@@ -138,7 +128,7 @@ export default function Pia() {
                       ))}
                     </div>
                   ) : (
-                    <SimpleMarkdown content={msg.content} className="text-foreground" />
+                    <p className="text-sm text-foreground whitespace-pre-wrap">{msg.content}</p>
                   )}
                 </div>
               </div>
@@ -174,15 +164,9 @@ export default function Pia() {
               )}
             </button>
           </div>
-          <div className="text-xs text-muted-foreground text-center mt-2 space-y-0.5">
-            <p>Enter zum Senden · Shift+Enter für neue Zeile</p>
-            <p className="text-muted-foreground/60">
-              Nachrichten werden durch Google Gemini verarbeitet.{' '}
-              <a href="/datenschutz" className="underline hover:text-muted-foreground transition-colors">
-                Datenschutz
-              </a>
-            </p>
-          </div>
+          <p className="text-xs text-muted-foreground text-center mt-2">
+            Enter zum Senden · Shift+Enter für neue Zeile
+          </p>
         </div>
       </div>
     </div>

@@ -3,9 +3,7 @@ import { MessageCircle, X, Send, Bot, RotateCcw, Maximize2 } from 'lucide-react'
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useChat } from '@/contexts/ChatContext';
 import { SimpleMarkdown } from '@/components/SimpleMarkdown';
-
-const WELCOME =
-  'Hallo! Ich bin Pia, die KI-Assistentin von Clarissa Heinemann. Ich beantworte gerne deine Fragen zu ihren Leistungen, Projekten und Preisen. Wie kann ich dir helfen?';
+import { WELCOME } from '@/constants/pia';
 
 export function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
