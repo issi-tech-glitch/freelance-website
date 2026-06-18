@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { MessageCircle, X, Send, Bot, RotateCcw, Maximize2 } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useChat } from '@/contexts/ChatContext';
+import { SimpleMarkdown } from '@/components/SimpleMarkdown';
 
 const WELCOME =
   'Hallo! Ich bin Pia, die KI-Assistentin von Clarissa Heinemann. Ich beantworte gerne deine Fragen zu ihren Leistungen, Projekten und Preisen. Wie kann ich dir helfen?';
@@ -181,7 +182,7 @@ function BotBubble({ content, typing }: { content: string; typing?: boolean }) {
         {typing ? (
           <TypingDots />
         ) : (
-          <p className="whitespace-pre-wrap text-foreground">{content}</p>
+          <SimpleMarkdown content={content} className="text-foreground" />
         )}
       </div>
     </div>

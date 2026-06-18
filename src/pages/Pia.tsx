@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Bot, Send, RotateCcw, Loader2, Sparkles } from 'lucide-react';
 import { useChat } from '@/contexts/ChatContext';
+import { SimpleMarkdown } from '@/components/SimpleMarkdown';
 
 const WELCOME =
   'Hallo! Ich bin Pia, die KI-Assistentin von Clarissa Heinemann. Ich beantworte gerne deine Fragen zu Clarissas Lebenslauf und Erfahrungen. Wie kann ich dir helfen?';
@@ -137,7 +138,7 @@ export default function Pia() {
                       ))}
                     </div>
                   ) : (
-                    <p className="text-sm text-foreground whitespace-pre-wrap">{msg.content}</p>
+                    <SimpleMarkdown content={msg.content} className="text-foreground" />
                   )}
                 </div>
               </div>
