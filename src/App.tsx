@@ -12,6 +12,9 @@ import Footer from "./components/Footer";
 import ProjektEmail from "./pages/ProjektEmail";
 import ProjektReporting from "./pages/ProjektReporting";
 import ProjektBestell from "./pages/ProjektBestell";
+import Pia from "./pages/Pia";
+import { ChatProvider } from "./contexts/ChatContext";
+import { ChatWidget } from "./components/ChatWidget";
 
 const queryClient = new QueryClient();
 
@@ -21,18 +24,22 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/projekte/email-kundendaten-erfassung" element={<ProjektEmail />} />
-          <Route path="/projekte/automatisiertes-wochen-reporting" element={<ProjektReporting />} />
-          <Route path="/projekte/bestell-lager-automatisierung" element={<ProjektBestell />} />
-          <Route path="/impressum" element={<Impressum />} />
-          <Route path="/datenschutz" element={<Datenschutz />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        <Footer />
+        <ChatProvider>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/pia" element={<Pia />} />
+            <Route path="/projekte/email-kundendaten-erfassung" element={<ProjektEmail />} />
+            <Route path="/projekte/automatisiertes-wochen-reporting" element={<ProjektReporting />} />
+            <Route path="/projekte/bestell-lager-automatisierung" element={<ProjektBestell />} />
+            <Route path="/impressum" element={<Impressum />} />
+            <Route path="/datenschutz" element={<Datenschutz />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          <Footer />
+          <ChatWidget />
+        </ChatProvider>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
