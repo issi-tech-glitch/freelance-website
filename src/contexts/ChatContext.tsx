@@ -19,8 +19,10 @@ const ChatContext = createContext<ChatContextType | null>(null);
 export function ChatProvider({ children }: { children: ReactNode }) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [isStreaming, setIsStreaming] = useState(false);
-  // ref keeps a sync-readable copy so sendMessage doesn't need messages as a dep
   const messagesRef = useRef<Message[]>([]);
+  // Buffer for incoming chunks; drained by RAF loop to smooth out burst delivery
+  const chunkBufferRef = useRef('');
+  const rafIdRef = useRef(0);
 
   const syncSet = (updater: (prev: Message[]) => Message[]) => {
     setMessages(prev => {
@@ -38,6 +40,26 @@ export function ChatProvider({ children }: { children: ReactNode }) {
 
     syncSet(prev => [...prev, userMessage, { role: 'assistant', content: '' }]);
     setIsStreaming(true);
+    chunkBufferRef.current = '';
+
+    // RAF loop drains the buffer at display refresh rate (~60fps), smoothing burst delivery
+    const drainBuffer = () => {
+      const pending = chunkBufferRef.current;
+      if (pending) {
+        chunkBufferRef.current = '';
+        setMessages(prev => {
+          const updated = [...prev];
+          const last = updated[updated.length - 1];
+          if (last?.role === 'assistant') {
+            updated[updated.length - 1] = { ...last, content: last.content + pending };
+          }
+          messagesRef.current = updated;
+          return updated;
+        });
+      }
+      rafIdRef.current = requestAnimationFrame(drainBuffer);
+    };
+    rafIdRef.current = requestAnimationFrame(drainBuffer);
 
     try {
       const response = await fetch(API_URL, {
@@ -58,16 +80,10 @@ export function ChatProvider({ children }: { children: ReactNode }) {
         const { done, value } = await reader.read();
         if (done) break;
         const chunk = decoder.decode(value, { stream: true });
-        if (chunk) received = true;
-        setMessages(prev => {
-          const updated = [...prev];
-          const last = updated[updated.length - 1];
-          if (last?.role === 'assistant') {
-            updated[updated.length - 1] = { ...last, content: last.content + chunk };
-          }
-          messagesRef.current = updated;
-          return updated;
-        });
+        if (chunk) {
+          received = true;
+          chunkBufferRef.current += chunk;
+        }
       }
 
       if (!received) throw new Error('Leere Antwort');
@@ -86,6 +102,21 @@ export function ChatProvider({ children }: { children: ReactNode }) {
         });
       }
     } finally {
+      cancelAnimationFrame(rafIdRef.current);
+      // Flush any remaining buffered content
+      const remaining = chunkBufferRef.current;
+      chunkBufferRef.current = '';
+      if (remaining) {
+        setMessages(prev => {
+          const updated = [...prev];
+          const last = updated[updated.length - 1];
+          if (last?.role === 'assistant') {
+            updated[updated.length - 1] = { ...last, content: last.content + remaining };
+          }
+          messagesRef.current = updated;
+          return updated;
+        });
+      }
       setIsStreaming(false);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
