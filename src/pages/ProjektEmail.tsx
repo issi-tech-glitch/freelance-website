@@ -27,7 +27,7 @@ const ProjektEmail = () => {
 
             {/* Einleitung zum Case - Zentriert */}
             <div className="max-w-5xl mx-auto">
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed md:leading-7">
                 Manuelle E-Mail-Bearbeitung führt zu Chaos in deinem CRM. Ich automatisiere diesen Prozess: E-Mails werden smart gefiltert, Leads priorisiert und direkt in Odoo erstellt – <span className="text-foreground font-medium">DSGVO-konform mit europäischer KI</span>.
               </p>
             </div>
@@ -79,7 +79,7 @@ const ProjektEmail = () => {
             {/* Feature 1 */}
             <div className="bg-card border border-border p-6 md:p-8 rounded-2xl shadow-sm">
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 flex-shrink-0">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 shrink-0">
                   <Filter className="w-6 h-6 text-primary" />
                 </div>
                 <div>
@@ -94,7 +94,7 @@ const ProjektEmail = () => {
             {/* Feature 2 */}
             <div className="bg-card border border-border p-6 md:p-8 rounded-2xl shadow-sm">
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 flex-shrink-0">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 shrink-0">
                   <Zap className="w-6 h-6 text-primary" />
                 </div>
                 <div>
@@ -109,7 +109,7 @@ const ProjektEmail = () => {
             {/* Feature 3 */}
             <div className="bg-card border border-border p-6 md:p-8 rounded-2xl shadow-sm">
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 flex-shrink-0">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 shrink-0">
                   <Shield className="w-6 h-6 text-primary" />
                 </div>
                 <div>
@@ -124,7 +124,7 @@ const ProjektEmail = () => {
             {/* Feature 4 */}
             <div className="bg-card border border-border p-6 md:p-8 rounded-2xl shadow-sm">
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 flex-shrink-0">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 shrink-0">
                   <Cpu className="w-6 h-6 text-primary" />
                 </div>
                 <div>
@@ -159,7 +159,7 @@ const ProjektEmail = () => {
                 </p>
               </div>
 
-              <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 flex-shrink-0 mt-[-40px]" />
+              <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 shrink-0" />
 
               {/* Step 2: Filter */}
               <div className="flex flex-col items-center text-center max-w-[200px] group">
@@ -172,7 +172,7 @@ const ProjektEmail = () => {
                 </p>
               </div>
 
-              <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 flex-shrink-0 mt-[-40px]" />
+              <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 shrink-0" />
 
               {/* Step 3: AI */}
               <div className="flex flex-col items-center text-center max-w-[200px] group">
@@ -185,7 +185,7 @@ const ProjektEmail = () => {
                 </p>
               </div>
 
-              <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 flex-shrink-0 mt-[-40px]" />
+              <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 shrink-0" />
 
               {/* Step 4: CRM */}
               <div className="flex flex-col items-center text-center max-w-[200px] group">
@@ -198,7 +198,7 @@ const ProjektEmail = () => {
                 </p>
               </div>
 
-              <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 flex-shrink-0 mt-[-40px]" />
+              <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 shrink-0" />
 
               {/* Step 5: Dashboard */}
               <div className="flex flex-col items-center text-center max-w-[200px] group">

@@ -43,7 +43,7 @@ const ProjektPia = () => {
               Pia – <span className="text-primary">KI-Chatbot & Agent</span> 
             </h1>
             <div className="max-w-5xl mx-auto">
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed md:leading-7">
                 Pia beantwortet Fragen zu meinem Lebenslauf und meiner Projekterfahrung {" "}
                 <span className="text-foreground font-medium">rund um die Uhr</span>, erfasst Kontaktdaten automatisch und dokumentiert Wissenslücken – vollständig agentenbasiert.
               </p>
@@ -94,7 +94,7 @@ const ProjektPia = () => {
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <div className="bg-card border border-border p-6 md:p-8 rounded-2xl shadow-sm">
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 flex-shrink-0">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 shrink-0">
                   <Cpu className="w-6 h-6 text-primary" />
                 </div>
                 <div>
@@ -108,7 +108,7 @@ const ProjektPia = () => {
 
             <div className="bg-card border border-border p-6 md:p-8 rounded-2xl shadow-sm">
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 flex-shrink-0">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 shrink-0">
                   <MessageCircle className="w-6 h-6 text-primary" />
                 </div>
                 <div>
@@ -122,7 +122,7 @@ const ProjektPia = () => {
 
             <div className="bg-card border border-border p-6 md:p-8 rounded-2xl shadow-sm">
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 flex-shrink-0">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 shrink-0">
                   <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <div>
@@ -136,7 +136,7 @@ const ProjektPia = () => {
 
             <div className="bg-card border border-border p-6 md:p-8 rounded-2xl shadow-sm">
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 flex-shrink-0">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 shrink-0">
                   <Wrench className="w-6 h-6 text-primary" />
                 </div>
                 <div>
@@ -195,7 +195,7 @@ const ProjektPia = () => {
                 </p>
               </div>
 
-              <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 flex-shrink-0 mt-[-40px]" />
+              <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 shrink-0" />
 
               <div className="flex flex-col items-center text-center max-w-[180px] group">
                 <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
@@ -207,7 +207,7 @@ const ProjektPia = () => {
                 </p>
               </div>
 
-              <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 flex-shrink-0 mt-[-40px]" />
+              <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 shrink-0" />
 
               <div className="flex flex-col items-center text-center max-w-[180px] group">
                 <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
@@ -219,7 +219,7 @@ const ProjektPia = () => {
                 </p>
               </div>
 
-              <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 flex-shrink-0 mt-[-40px]" />
+              <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 shrink-0" />
 
               <div className="flex flex-col items-center text-center max-w-[180px] group">
                 <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
@@ -231,7 +231,7 @@ const ProjektPia = () => {
                 </p>
               </div>
 
-              <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 flex-shrink-0 mt-[-40px]" />
+              <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 shrink-0" />
 
               <div className="flex flex-col items-center text-center max-w-[180px] group">
                 <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">

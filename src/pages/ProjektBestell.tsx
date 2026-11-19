@@ -46,7 +46,7 @@ Max Mustermann`; // Habe Max Mustermann hinzugefügt, damit es klarer ist
 
                         {/* Einleitung zum Case - Zentriert */}
                         <div className="max-w-5xl mx-auto">
-                            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed md:leading-7">
                                Ich automatisiere den Weg von der E-Mail direkt in die Datenbank. Eine KI analysiert Freitext-Bestellungen und überführt sie in strukturierte Datensätze. Das Ergebnis ist eine <span className="text-foreground font-medium">nahtlose Lager-Synchronisation</span> ohne manuelle Reibungsverluste.</p>
                         </div>
                     </div>
@@ -179,7 +179,7 @@ Max Mustermann`; // Habe Max Mustermann hinzugefügt, damit es klarer ist
                                 </p>
                             </div>
 
-                            <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 flex-shrink-0 mt-[-40px]" />
+                            <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 shrink-0" />
 
                             {/* Step 2: Make */}
                             <div className="flex flex-col items-center text-center max-w-[200px] group">
@@ -192,7 +192,7 @@ Max Mustermann`; // Habe Max Mustermann hinzugefügt, damit es klarer ist
                                 </p>
                             </div>
 
-                            <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 flex-shrink-0 mt-[-40px]" />
+                            <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 shrink-0" />
 
                             {/* Step 3: AI */}
                             <div className="flex flex-col items-center text-center max-w-[200px] group">
@@ -205,7 +205,7 @@ Max Mustermann`; // Habe Max Mustermann hinzugefügt, damit es klarer ist
                                 </p>
                             </div>
 
-                            <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 flex-shrink-0 mt-[-40px]" />
+                            <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 shrink-0" />
 
                             {/* Step 4: Database */}
                             <div className="flex flex-col items-center text-center max-w-[200px] group">
@@ -218,7 +218,7 @@ Max Mustermann`; // Habe Max Mustermann hinzugefügt, damit es klarer ist
                                 </p>
                             </div>
 
-                            <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 flex-shrink-0 mt-[-40px]" />
+                            <ChevronRight className="hidden lg:block w-5 h-5 text-muted-foreground/30 shrink-0" />
 
                             {/* Step 5: Dashboard */}
                             <div className="flex flex-col items-center text-center max-w-[200px] group">

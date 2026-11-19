@@ -50,7 +50,7 @@ const Process = () => {
                 style={{ animationDelay: `${0.1 + index * 0.1}s` }}
               >
                 {/* Number */}
-                <div className="relative z-10 flex-shrink-0 w-16 h-16 rounded-2xl bg-primary text-primary-foreground flex items-center justify-center font-mono font-bold text-lg">
+                <div className="relative z-10 shrink-0 w-16 h-16 rounded-2xl bg-primary text-primary-foreground flex items-center justify-center font-mono font-bold text-lg">
                   {step.number}
                 </div>
 

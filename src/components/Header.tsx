@@ -92,7 +92,7 @@ const Header = () => {
                   </div>
 
                   {showProjectsMenu && (
-                    <div className="absolute top-full left-0 w-96 min-w-[22rem] bg-background border border-border/60 rounded-2xl shadow-2xl p-2">
+                    <div className="absolute top-full left-0 w-96 min-w-88 bg-background border border-border/60 rounded-2xl shadow-2xl p-2">
                       <div className="flex flex-col divide-y divide-border/50 rounded-lg overflow-hidden">
                         {cases.map((p) => (
                           <Link

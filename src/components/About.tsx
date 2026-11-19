@@ -1,5 +1,5 @@
 import { ChevronRight, Code2, Lightbulb, Target, Wrench } from "lucide-react";
-import { FaLinkedin, FaGithub, FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const qualities = [
   {
@@ -85,12 +85,6 @@ const About = () => {
               <div className="flex gap-4 mt-4">
                 <a href="https://www.linkedin.com/in/clarissa-heinemann-832620170" target="_blank" rel="noreferrer">
                   <FaLinkedin className="w-6 h-6 text-primary hover:text-accent transition-colors" />
-                </a>
-                <a href="https://www.tiktok.com/@tech.glitch" target="_blank" rel="noreferrer">
-                  <FaTiktok className="w-6 h-6 text-primary hover:text-accent transition-colors" />
-                </a>
-                <a href="https://www.instagram.com/issi.tech.glitch/" target="_blank" rel="noreferrer">
-                  <FaInstagram className="w-6 h-6 text-primary hover:text-accent transition-colors" />
                 </a>
                 <a href="https://github.com/issi-tech-glitch" target="_blank" rel="noreferrer">
                   <FaGithub className="w-6 h-6 text-primary hover:text-accent transition-colors" />
@@ -219,7 +213,7 @@ const About = () => {
 
                 <ul className="space-y-3 text-lg text-muted-foreground">
                   <li className="flex items-start gap-3">
-                    <ChevronRight className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                    <ChevronRight className="w-4 h-4 text-primary mt-1 shrink-0" />
                     <span>
                       Mehrjährige Erfahrung aus <span className="text-foreground font-medium">KI- und Datenprojekten </span>
                       in der Forschung und in der Praxis
@@ -227,7 +221,7 @@ const About = () => {
                   </li>
 
                   <li className="flex items-start gap-3">
-                    <ChevronRight className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                    <ChevronRight className="w-4 h-4 text-primary mt-1 shrink-0" />
                     <span>
                       Projektbezogene Arbeit in <span className="text-foreground font-medium">Robotic Process Automation (RPA) </span>
                       und als <span className="text-foreground font-medium">Data Engineer</span>
@@ -235,7 +229,7 @@ const About = () => {
                   </li>
 
                   <li className="flex items-start gap-3">
-                    <ChevronRight className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                    <ChevronRight className="w-4 h-4 text-primary mt-1 shrink-0" />
                     <span>
                       Fokus auf <span className="text-foreground font-medium">stabile, wartbare Automatisierungen</span>,
                       die Prozesse wirklich vereinfachen
