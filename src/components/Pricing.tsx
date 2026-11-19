@@ -75,16 +75,16 @@ const Pricing = () => {
                             </div>
 
                             {/* Description */}
-                            <p className="text-md text-muted-foreground mb-4 min-h-[3rem]">{pkg.description}</p>
+                            <p className="text-md text-muted-foreground mb-4 min-h-12">{pkg.description}</p>
 
                             {/* Price */}
                             <p className="text-3xl font-bold mb-8 text-foreground">{pkg.price}</p>
 
                             {/* Features */}
-                            <ul className="space-y-4 text-md text-muted-foreground flex-grow">
+                            <ul className="space-y-4 text-md text-muted-foreground grow">
                                 {pkg.features.map((feature, i) => (
                                     <li key={i} className="flex items-start gap-3">
-                                        <ChevronRight className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
+                                        <ChevronRight className="w-4 h-4 text-primary mt-1 shrink-0" />
                                         <span className="leading-tight">{feature}</span>
                                     </li>
                                 ))}

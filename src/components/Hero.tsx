@@ -38,7 +38,7 @@ const Hero = () => {
 
           <div className="relative">
             <div className="relative z-10 pr-0 lg:pr-60 max-w-full lg:max-w-6xl">
-              <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight mb-6 opacity-0 animate-fade-in text-balance" style={{ animationDelay: "0.2s" }}>
+              <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight md:leading-none mb-6 opacity-0 animate-fade-in text-balance" style={{ animationDelay: "0.2s" }}>
                 Ich <span className="gradient-text">automatisiere</span> Prozesse
                 – stabil, wartbar und messbar.
               </h1>
@@ -68,14 +68,14 @@ const Hero = () => {
             </div>
 
             {/* Hero image layer - unverändert */}
-            <div className="hidden lg:block absolute top-1/2 right-[-6rem] -translate-y-1/2 z-0">
+            <div className="hidden lg:block absolute top-1/2 -right-24 -translate-y-1/2 z-0">
               <img src="/images/hero-heinemann-banner.png" alt="Profilbild" className="h-[520px] w-auto object-cover" />
             </div>
           </div>
 
           {/* Trust indicators - unverändert */}
           <div className="mt-16 mb-10 pt-8 opacity-0 animate-fade-in" style={{ animationDelay: "0.5s" }}>
-            <div className="w-[50%] border-t-2 border-border/100 mb-4 rounded-full"></div>
+            <div className="w-[50%] border-t-2 border-border mb-4 rounded-full"></div>
             <p className="text-sm text-muted-foreground mb-4">Fokus auf messbare Ergebnisse:</p>
             <div className="flex flex-wrap gap-6 md:gap-10">
               {["Zeitersparnis", "Weniger manuelle Arbeit", "Saubere Prozesse", "Wartbare Lösungen"].map((item) => (

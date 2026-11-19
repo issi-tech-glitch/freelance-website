@@ -45,7 +45,7 @@ export default function Pia() {
       <div className="flex flex-col flex-1 max-w-3xl w-full mx-auto overflow-hidden">
 
         {/* Page header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-border/60 flex-shrink-0">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-border/60 shrink-0">
           <div className="flex items-center gap-3">
             <div
               className="w-10 h-10 rounded-full flex items-center justify-center shadow-md"
@@ -73,7 +73,7 @@ export default function Pia() {
         <div className="flex-1 overflow-y-auto px-6 py-6 flex flex-col gap-4">
           {/* Welcome */}
           <div className="flex gap-3 items-end">
-            <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mb-0.5">
+            <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mb-0.5">
               <Bot className="w-4 h-4 text-primary" />
             </div>
             <div className="bg-muted rounded-2xl rounded-bl-sm px-4 py-3 max-w-[80%]">
@@ -114,7 +114,7 @@ export default function Pia() {
               </div>
             ) : (
               <div key={i} className="flex gap-3 items-end">
-                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mb-0.5">
+                <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mb-0.5">
                   <Bot className="w-4 h-4 text-primary" />
                 </div>
                 <div className="bg-muted rounded-2xl rounded-bl-sm px-4 py-3 max-w-[80%]">
@@ -139,7 +139,7 @@ export default function Pia() {
         </div>
 
         {/* Input bar */}
-        <div className="px-6 py-4 border-t border-border/60 flex-shrink-0">
+        <div className="px-6 py-4 border-t border-border/60 shrink-0">
           <div className="flex gap-3 items-end">
             <textarea
               ref={inputRef}
@@ -149,12 +149,12 @@ export default function Pia() {
               placeholder="Stell Pia eine Frage…"
               rows={1}
               disabled={isStreaming}
-              className="flex-1 resize-none rounded-xl border border-border bg-muted/50 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 placeholder:text-muted-foreground disabled:opacity-50 max-h-32"
+              className="flex-1 resize-none rounded-xl border border-border bg-muted/50 px-4 py-3 text-sm focus:outline-hidden focus:ring-2 focus:ring-primary/40 placeholder:text-muted-foreground disabled:opacity-50 max-h-32"
             />
             <button
               onClick={() => handleSend()}
               disabled={!input.trim() || isStreaming}
-              className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 disabled:opacity-40 disabled:cursor-not-allowed transition-all hover:scale-105 active:scale-95"
+              className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 disabled:opacity-40 disabled:cursor-not-allowed transition-all hover:scale-105 active:scale-95"
               style={{ background: 'var(--gradient-primary)' }}
               aria-label="Senden"
             >
