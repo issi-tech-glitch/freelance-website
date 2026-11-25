@@ -41,7 +41,7 @@
     "lovable-tagger": "^1.1.13",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.3.5",
-    "typescript": "^5.8.3",
+    "typescript": "^7.0.0",
     "typescript-eslint": "^8.73.0",
     "vite": "^8.3.8"
   }
